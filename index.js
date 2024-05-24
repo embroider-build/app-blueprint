@@ -20,7 +20,7 @@ module.exports = {
   },
 
   async afterInstall(options) {
-    // there doesn't seem to be a way to tell ember-cli to not prompt to override files that were added in the beforeInstall 
+    // there doesn't seem to be a way to tell ember-cli to not prompt to override files that were added in the beforeInstall
     // so I'm just copying a few over at this stage
     await fs.copy(join(__dirname, 'files-override'), options.target, {
       overwrite: true,
@@ -32,12 +32,12 @@ module.exports = {
       'save-dev': true,
       verbose: false,
       packages: [
-        '@embroider/core@unstable', 
+        '@embroider/core@unstable',
         '@embroider/vite@unstable',
         '@embroider/compat@unstable',
         '@embroider/test-setup@unstable',
         'vite',
-        '@rollup/plugin-babel'
+        '@rollup/plugin-babel',
       ],
       packageManager: options.packageManager,
     });
@@ -55,11 +55,11 @@ module.exports = {
 
     json.scripts = {
       ...json.scripts,
-      "build": "vite build",
-      "start": "vite",
-      "test:ember": "vite build --mode test && ember test --path dist"
+      build: 'vite build',
+      start: 'vite',
+      'test:ember': 'vite build --mode test && ember test --path dist',
     };
 
     await fs.writeFile(packageJson, JSON.stringify(json, null, 2));
   },
-}
+};
