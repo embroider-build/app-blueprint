@@ -2,7 +2,9 @@
   "name": "@embroider/app-blueprint",
   "version": "0.1.0",
   "description": "Blueprint for next generation of Ember apps",
-  "keywords": [],
+  "keywords": [
+    "ember-blueprint"
+  ],
   "repository": {
     "type": "git",
     "url": "git@github.com:embroider-build/app-blueprint.git"
