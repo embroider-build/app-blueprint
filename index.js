@@ -1,6 +1,7 @@
 const Blueprint = require('ember-cli/lib/models/blueprint');
 const fs = require('fs-extra');
 const { join } = require('path');
+const emberCliUpdate = require('./lib/ember-cli-update');
 
 const appBlueprint = Blueprint.lookup('app');
 
@@ -19,13 +20,7 @@ module.exports = {
     });
   },
 
-  async afterInstall(options) {
-    // there doesn't seem to be a way to tell ember-cli to not prompt to override files that were added in the beforeInstall
-    // so I'm just copying a few over at this stage
-    await fs.copy(join(__dirname, 'files-override'), options.target, {
-      overwrite: true,
-    });
-
+  async updateDeps(options) {
     // this.addPackagesToProject doesn't respect the packageManager that the blueprint specified 🙈 so we're skipping a level here
     let installTask = this.taskFor('npm-install');
     await installTask.run({
@@ -49,6 +44,14 @@ module.exports = {
       packages: ['ember-fetch'],
       packageManager: options.packageManager,
     });
+  },
+
+  async afterInstall(options) {
+    // there doesn't seem to be a way to tell ember-cli to not prompt to override files that were added in the beforeInstall
+    // so I'm just copying a few over at this stage
+    await fs.copy(join(__dirname, 'files-override'), options.target, {
+      overwrite: true,
+    });
 
     let packageJson = join(options.target, 'package.json');
     let json = await fs.readJSON(packageJson);
@@ -61,5 +64,14 @@ module.exports = {
     };
 
     await fs.writeFile(packageJson, JSON.stringify(json, null, 2));
+
+    await emberCliUpdate({
+      projectDir: options.target,
+      projectName: options.projectName,
+      version: require('./package.json').version,
+      options,
+    });
+
+    await this.updateDeps(options);
   },
 };
