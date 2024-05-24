@@ -1,0 +1,21 @@
+{
+  "solution": {
+    "@embroider/app-blueprint": {
+      "impact": "minor",
+      "oldVersion": "0.0.0",
+      "newVersion": "0.1.0",
+      "constraints": [
+        {
+          "impact": "minor",
+          "reason": "Appears in changelog section :rocket: Enhancement"
+        },
+        {
+          "impact": "patch",
+          "reason": "Appears in changelog section :house: Internal"
+        }
+      ],
+      "pkgJSONPath": "./package.json"
+    }
+  },
+  "description": "## Release (2024-05-24)\n\n@embroider/app-blueprint 0.1.0 (minor)\n\n#### :rocket: Enhancement\n* `@embroider/app-blueprint`\n  * [#1](https://github.com/embroider-build/app-blueprint/pull/1) Initial working version ([@mansona](https://github.com/mansona))\n\n#### :house: Internal\n* `@embroider/app-blueprint`\n  * [#2](https://github.com/embroider-build/app-blueprint/pull/2) setup release-plan ([@mansona](https://github.com/mansona))\n\n#### Committers: 1\n- Chris Manson ([@mansona](https://github.com/mansona))\n"
+}
