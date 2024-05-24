@@ -1,0 +1,22 @@
+{
+  "name": "@embroider/app-blueprint",
+  "version": "0.0.0",
+  "description": "Blueprint for next generation of Ember apps",
+  "main": "index.js",
+  "scripts": {
+    "lint": "eslint .",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "ember-cli": "^5.8.1",
+    "fs-extra": "^11.2.0"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.3.0",
+    "eslint": "9.x",
+    "globals": "^15.3.0"
+  }
+}
