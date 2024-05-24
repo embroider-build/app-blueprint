@@ -1,17 +1,21 @@
 {
   "solution": {
     "@embroider/app-blueprint": {
-      "impact": "patch",
-      "oldVersion": "0.1.0",
-      "newVersion": "0.1.1",
+      "impact": "minor",
+      "oldVersion": "0.1.1",
+      "newVersion": "0.2.0",
       "constraints": [
         {
+          "impact": "minor",
+          "reason": "Appears in changelog section :rocket: Enhancement"
+        },
+        {
           "impact": "patch",
-          "reason": "Appears in changelog section :bug: Bug Fix"
+          "reason": "Appears in changelog section :house: Internal"
         }
       ],
       "pkgJSONPath": "./package.json"
     }
   },
-  "description": "## Release (2024-05-24)\n\n@embroider/app-blueprint 0.1.1 (patch)\n\n#### :bug: Bug Fix\n* `@embroider/app-blueprint`\n  * [#4](https://github.com/embroider-build/app-blueprint/pull/4) add ember-blueprint to keywords ([@mansona](https://github.com/mansona))\n\n#### Committers: 1\n- Chris Manson ([@mansona](https://github.com/mansona))\n"
+  "description": "## Release (2024-05-24)\n\n@embroider/app-blueprint 0.2.0 (minor)\n\n#### :rocket: Enhancement\n* `@embroider/app-blueprint`\n  * [#6](https://github.com/embroider-build/app-blueprint/pull/6) Remove unneeded deps ([@NullVoxPopuli](https://github.com/NullVoxPopuli))\n  * [#9](https://github.com/embroider-build/app-blueprint/pull/9) make sure ember-cli-update config is correct ([@mansona](https://github.com/mansona))\n\n#### :house: Internal\n* `@embroider/app-blueprint`\n  * [#10](https://github.com/embroider-build/app-blueprint/pull/10) add a basic smoke test ([@mansona](https://github.com/mansona))\n  * [#7](https://github.com/embroider-build/app-blueprint/pull/7) Add prettier ([@mansona](https://github.com/mansona))\n\n#### Committers: 2\n- Chris Manson ([@mansona](https://github.com/mansona))\n- [@NullVoxPopuli](https://github.com/NullVoxPopuli)\n"
 }
