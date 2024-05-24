@@ -41,7 +41,15 @@ module.exports = {
     await uninstallTask.run({
       'save-dev': true,
       verbose: false,
-      packages: ['ember-fetch'],
+      packages: [
+        'ember-fetch',
+        'broccoli-asset-rev',
+        'ember-cli-app-version',
+        'ember-cli-clean-css',
+        'ember-cli-dependency-checker',
+        'ember-cli-sri',
+        'ember-cli-terser',
+      ],
       packageManager: options.packageManager,
     });
   },
