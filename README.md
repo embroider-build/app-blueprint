@@ -1,3 +1,5 @@
+![app-blueprint banner](./app-blueprint-banner.png)
+
 # @embroider/app-blueprint
 
 **Very** experimental blueprint for scaffolding ember v2 apps with Vite
