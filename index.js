@@ -1,7 +1,8 @@
 const Blueprint = require('ember-cli/lib/models/blueprint');
-const fs = require('fs-extra');
+const fs = require('fs');
 const { join } = require('path');
 const emberCliUpdate = require('./lib/ember-cli-update');
+const copyWithTemplate = require('./lib/copy-with-template');
 
 const appBlueprint = Blueprint.lookup('app');
 
@@ -64,7 +65,7 @@ module.exports = {
     );
 
     let packageJson = join(options.target, 'package.json');
-    let json = await fs.readJSON(packageJson);
+    let json = JSON.parse(fs.readFileSync(packageJson));
 
     json.scripts = {
       ...json.scripts,
@@ -73,7 +74,7 @@ module.exports = {
       'test:ember': 'vite build --mode test && ember test --path dist',
     };
 
-    await fs.writeFile(packageJson, JSON.stringify(json, null, 2));
+    fs.writeFileSync(packageJson, JSON.stringify(json, null, 2));
 
     await emberCliUpdate({
       projectDir: options.target,
