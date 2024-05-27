@@ -1,7 +1,8 @@
 const Blueprint = require('ember-cli/lib/models/blueprint');
-const fs = require('fs-extra');
+const fs = require('fs');
 const { join } = require('path');
 const emberCliUpdate = require('./lib/ember-cli-update');
+const copyWithTemplate = require('./lib/copy-with-template');
 
 const appBlueprint = Blueprint.lookup('app');
 
@@ -57,12 +58,14 @@ module.exports = {
   async afterInstall(options) {
     // there doesn't seem to be a way to tell ember-cli to not prompt to override files that were added in the beforeInstall
     // so I'm just copying a few over at this stage
-    await fs.copy(join(__dirname, 'files-override'), options.target, {
-      overwrite: true,
-    });
+    copyWithTemplate(
+      join(__dirname, 'files-override'),
+      options.target,
+      options,
+    );
 
     let packageJson = join(options.target, 'package.json');
-    let json = await fs.readJSON(packageJson);
+    let json = JSON.parse(fs.readFileSync(packageJson));
 
     json.scripts = {
       ...json.scripts,
@@ -71,7 +74,7 @@ module.exports = {
       'test:ember': 'vite build --mode test && ember test --path dist',
     };
 
-    await fs.writeFile(packageJson, JSON.stringify(json, null, 2));
+    fs.writeFileSync(packageJson, JSON.stringify(json, null, 2));
 
     await emberCliUpdate({
       projectDir: options.target,

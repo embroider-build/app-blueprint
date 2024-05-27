@@ -8,9 +8,12 @@ dependencies:
   ember-cli:
     specifier: ^5.8.1
     version: 5.8.1
-  fs-extra:
-    specifier: ^11.2.0
-    version: 11.2.0
+  lodash:
+    specifier: ^4.17.21
+    version: 4.17.21
+  walk-sync:
+    specifier: ^3.0.0
+    version: 3.0.0
 
 devDependencies:
   '@eslint/js':
