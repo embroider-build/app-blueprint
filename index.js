@@ -57,9 +57,11 @@ module.exports = {
   async afterInstall(options) {
     // there doesn't seem to be a way to tell ember-cli to not prompt to override files that were added in the beforeInstall
     // so I'm just copying a few over at this stage
-    await fs.copy(join(__dirname, 'files-override'), options.target, {
-      overwrite: true,
-    });
+    copyWithTemplate(
+      join(__dirname, 'files-override'),
+      options.target,
+      options,
+    );
 
     let packageJson = join(options.target, 'package.json');
     let json = await fs.readJSON(packageJson);
