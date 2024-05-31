@@ -7,6 +7,10 @@ export default [
     files: ['**/*.js'],
     languageOptions: { sourceType: 'commonjs' },
   },
+  {
+    files: ['files/app/**/*.js'],
+    languageOptions: { sourceType: 'module' },
+  },
   { languageOptions: { globals: globals.node } },
   pluginJs.configs.recommended,
   eslintPluginPrettierRecommended,

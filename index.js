@@ -32,6 +32,7 @@ module.exports = {
         '@embroider/vite@unstable',
         '@embroider/compat@unstable',
         '@embroider/test-setup@unstable',
+        '@embroider/config-meta-loader@unstable',
         'vite',
         '@rollup/plugin-babel',
       ],
