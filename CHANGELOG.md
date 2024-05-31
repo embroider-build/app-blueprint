@@ -1,5 +1,16 @@
 # Changelog
 
+## Release (2024-05-31)
+
+@embroider/app-blueprint 0.3.0 (minor)
+
+#### :rocket: Enhancement
+* `@embroider/app-blueprint`
+  * [#18](https://github.com/embroider-build/app-blueprint/pull/18) add new config structure ([@mansona](https://github.com/mansona))
+
+#### Committers: 1
+- Chris Manson ([@mansona](https://github.com/mansona))
+
 ## Release (2024-05-27)
 
 @embroider/app-blueprint 0.2.1 (patch)

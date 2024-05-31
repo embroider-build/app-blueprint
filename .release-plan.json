@@ -1,25 +1,17 @@
 {
   "solution": {
     "@embroider/app-blueprint": {
-      "impact": "patch",
-      "oldVersion": "0.2.0",
-      "newVersion": "0.2.1",
+      "impact": "minor",
+      "oldVersion": "0.2.1",
+      "newVersion": "0.3.0",
       "constraints": [
         {
-          "impact": "patch",
-          "reason": "Appears in changelog section :bug: Bug Fix"
-        },
-        {
-          "impact": "patch",
-          "reason": "Appears in changelog section :memo: Documentation"
-        },
-        {
-          "impact": "patch",
-          "reason": "Appears in changelog section :house: Internal"
+          "impact": "minor",
+          "reason": "Appears in changelog section :rocket: Enhancement"
         }
       ],
       "pkgJSONPath": "./package.json"
     }
   },
-  "description": "## Release (2024-05-27)\n\n@embroider/app-blueprint 0.2.1 (patch)\n\n#### :bug: Bug Fix\n* `@embroider/app-blueprint`\n  * [#17](https://github.com/embroider-build/app-blueprint/pull/17) Add smoke tests and fix the app-name.css link in index.html ([@mansona](https://github.com/mansona))\n\n#### :memo: Documentation\n* `@embroider/app-blueprint`\n  * [#11](https://github.com/embroider-build/app-blueprint/pull/11) docs: use npx instead of ember-cli global ([@IgnaceMaes](https://github.com/IgnaceMaes))\n\n#### :house: Internal\n* `@embroider/app-blueprint`\n  * [#15](https://github.com/embroider-build/app-blueprint/pull/15) schedule CI to run once a day ([@mansona](https://github.com/mansona))\n  * [#14](https://github.com/embroider-build/app-blueprint/pull/14) add a dependabot config to keep ember-cli up to date ([@mansona](https://github.com/mansona))\n\n#### Committers: 2\n- Chris Manson ([@mansona](https://github.com/mansona))\n- Ignace Maes ([@IgnaceMaes](https://github.com/IgnaceMaes))\n"
+  "description": "## Release (2024-05-31)\n\n@embroider/app-blueprint 0.3.0 (minor)\n\n#### :rocket: Enhancement\n* `@embroider/app-blueprint`\n  * [#18](https://github.com/embroider-build/app-blueprint/pull/18) add new config structure ([@mansona](https://github.com/mansona))\n\n#### Committers: 1\n- Chris Manson ([@mansona](https://github.com/mansona))\n"
 }
