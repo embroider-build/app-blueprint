@@ -6,6 +6,22 @@ This is likely to change on a daily basis so you have to keep up to date with th
 
 ## Usage
 
+### Generating a brand new app
+
+This following command will create a new folder called `my-fancy-app` in your cwd 
+
 ```bash
 npx ember-cli@latest new my-fancy-app -b @embroider/app-blueprint --pnpm
 ```
+
+### Updating an existing Ember app
+
+If you want to try to update an existing app you can run this command **inside** your app's directory:
+
+```bash
+pnpx ember-cli@latest init -b @embroider/app-blueprint --pnpm --name your-app-name
+```
+
+it will prompt you to override some files and you should say yes to every override. 
+
+Note: replace `your-app-name` with your existing app name (from the `package.json` file) for a smaller diff.
