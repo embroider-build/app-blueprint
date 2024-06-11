@@ -25,3 +25,11 @@ pnpx ember-cli@latest init -b @embroider/app-blueprint --pnpm --name your-app-na
 it will prompt you to override some files and you should say yes to every override. 
 
 Note: replace `your-app-name` with your existing app name (from the `package.json` file) for a smaller diff.
+
+### Updating the blueprint version
+
+Use [ember-cli-update](https://github.com/ember-cli/ember-cli-update) to update to later versions of the blueprint:
+
+```bash
+pnpx ember-cli-update
+```
