@@ -2,16 +2,20 @@
   "solution": {
     "@embroider/app-blueprint": {
       "impact": "minor",
-      "oldVersion": "0.2.1",
-      "newVersion": "0.3.0",
+      "oldVersion": "0.3.0",
+      "newVersion": "0.4.0",
       "constraints": [
         {
           "impact": "minor",
           "reason": "Appears in changelog section :rocket: Enhancement"
+        },
+        {
+          "impact": "patch",
+          "reason": "Appears in changelog section :memo: Documentation"
         }
       ],
       "pkgJSONPath": "./package.json"
     }
   },
-  "description": "## Release (2024-05-31)\n\n@embroider/app-blueprint 0.3.0 (minor)\n\n#### :rocket: Enhancement\n* `@embroider/app-blueprint`\n  * [#18](https://github.com/embroider-build/app-blueprint/pull/18) add new config structure ([@mansona](https://github.com/mansona))\n\n#### Committers: 1\n- Chris Manson ([@mansona](https://github.com/mansona))\n"
+  "description": "## Release (2024-06-13)\n\n@embroider/app-blueprint 0.4.0 (minor)\n\n#### :rocket: Enhancement\n* `@embroider/app-blueprint`\n  * [#31](https://github.com/embroider-build/app-blueprint/pull/31) fix the location of the rewritten app ([@mansona](https://github.com/mansona))\n\n#### :memo: Documentation\n* `@embroider/app-blueprint`\n  * [#30](https://github.com/embroider-build/app-blueprint/pull/30) docs: document update command ([@IgnaceMaes](https://github.com/IgnaceMaes))\n  * [#21](https://github.com/embroider-build/app-blueprint/pull/21) add docs for updating an existing app ([@mansona](https://github.com/mansona))\n\n#### Committers: 2\n- Chris Manson ([@mansona](https://github.com/mansona))\n- Ignace Maes ([@IgnaceMaes](https://github.com/IgnaceMaes))\n"
 }
