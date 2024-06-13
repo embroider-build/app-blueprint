@@ -1,5 +1,22 @@
 # Changelog
 
+## Release (2024-06-13)
+
+@embroider/app-blueprint 0.4.0 (minor)
+
+#### :rocket: Enhancement
+* `@embroider/app-blueprint`
+  * [#31](https://github.com/embroider-build/app-blueprint/pull/31) fix the location of the rewritten app ([@mansona](https://github.com/mansona))
+
+#### :memo: Documentation
+* `@embroider/app-blueprint`
+  * [#30](https://github.com/embroider-build/app-blueprint/pull/30) docs: document update command ([@IgnaceMaes](https://github.com/IgnaceMaes))
+  * [#21](https://github.com/embroider-build/app-blueprint/pull/21) add docs for updating an existing app ([@mansona](https://github.com/mansona))
+
+#### Committers: 2
+- Chris Manson ([@mansona](https://github.com/mansona))
+- Ignace Maes ([@IgnaceMaes](https://github.com/IgnaceMaes))
+
 ## Release (2024-05-31)
 
 @embroider/app-blueprint 0.3.0 (minor)
