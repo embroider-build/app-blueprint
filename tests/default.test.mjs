@@ -49,7 +49,7 @@ describe('basic functionality', function () {
     let result;
 
     try {
-      result = await execa('pnpm', ['test'], {
+      result = await execa('pnpm', ['test:ember'], {
         cwd: join(tmpDir.path, appName),
       });
     } catch (err) {
