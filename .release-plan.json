@@ -2,8 +2,8 @@
   "solution": {
     "@embroider/app-blueprint": {
       "impact": "minor",
-      "oldVersion": "0.3.0",
-      "newVersion": "0.4.0",
+      "oldVersion": "0.4.0",
+      "newVersion": "0.5.0",
       "constraints": [
         {
           "impact": "minor",
@@ -12,10 +12,14 @@
         {
           "impact": "patch",
           "reason": "Appears in changelog section :memo: Documentation"
+        },
+        {
+          "impact": "patch",
+          "reason": "Appears in changelog section :house: Internal"
         }
       ],
       "pkgJSONPath": "./package.json"
     }
   },
-  "description": "## Release (2024-06-13)\n\n@embroider/app-blueprint 0.4.0 (minor)\n\n#### :rocket: Enhancement\n* `@embroider/app-blueprint`\n  * [#31](https://github.com/embroider-build/app-blueprint/pull/31) fix the location of the rewritten app ([@mansona](https://github.com/mansona))\n\n#### :memo: Documentation\n* `@embroider/app-blueprint`\n  * [#30](https://github.com/embroider-build/app-blueprint/pull/30) docs: document update command ([@IgnaceMaes](https://github.com/IgnaceMaes))\n  * [#21](https://github.com/embroider-build/app-blueprint/pull/21) add docs for updating an existing app ([@mansona](https://github.com/mansona))\n\n#### Committers: 2\n- Chris Manson ([@mansona](https://github.com/mansona))\n- Ignace Maes ([@IgnaceMaes](https://github.com/IgnaceMaes))\n"
+  "description": "## Release (2024-06-27)\n\n@embroider/app-blueprint 0.5.0 (minor)\n\n#### :rocket: Enhancement\n* `@embroider/app-blueprint`\n  * [#37](https://github.com/embroider-build/app-blueprint/pull/37) add new app.js structure ([@mansona](https://github.com/mansona))\n\n#### :memo: Documentation\n* `@embroider/app-blueprint`\n  * [#33](https://github.com/embroider-build/app-blueprint/pull/33) Add a bigger warning for this repo ([@mansona](https://github.com/mansona))\n\n#### :house: Internal\n* `@embroider/app-blueprint`\n  * [#28](https://github.com/embroider-build/app-blueprint/pull/28) add regression tests for initialisers ([@mansona](https://github.com/mansona))\n  * [#35](https://github.com/embroider-build/app-blueprint/pull/35) add notification for failed github action ([@mansona](https://github.com/mansona))\n\n#### Committers: 1\n- Chris Manson ([@mansona](https://github.com/mansona))\n"
 }
