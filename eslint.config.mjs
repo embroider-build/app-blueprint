@@ -8,8 +8,13 @@ export default [
     languageOptions: { sourceType: 'commonjs' },
   },
   {
-    files: ['files/app/**/*.js'],
-    languageOptions: { sourceType: 'module' },
+    files: ['files/app/**/*.js', 'files-override/app/**/*.js'],
+    languageOptions: {
+      sourceType: 'module',
+      globals: {
+        ...globals.browser,
+      },
+    },
   },
   { languageOptions: { globals: globals.node } },
   pluginJs.configs.recommended,
