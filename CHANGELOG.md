@@ -1,5 +1,25 @@
 # Changelog
 
+## Release (2024-06-27)
+
+@embroider/app-blueprint 0.5.0 (minor)
+
+#### :rocket: Enhancement
+* `@embroider/app-blueprint`
+  * [#37](https://github.com/embroider-build/app-blueprint/pull/37) add new app.js structure ([@mansona](https://github.com/mansona))
+
+#### :memo: Documentation
+* `@embroider/app-blueprint`
+  * [#33](https://github.com/embroider-build/app-blueprint/pull/33) Add a bigger warning for this repo ([@mansona](https://github.com/mansona))
+
+#### :house: Internal
+* `@embroider/app-blueprint`
+  * [#28](https://github.com/embroider-build/app-blueprint/pull/28) add regression tests for initialisers ([@mansona](https://github.com/mansona))
+  * [#35](https://github.com/embroider-build/app-blueprint/pull/35) add notification for failed github action ([@mansona](https://github.com/mansona))
+
+#### Committers: 1
+- Chris Manson ([@mansona](https://github.com/mansona))
+
 ## Release (2024-06-13)
 
 @embroider/app-blueprint 0.4.0 (minor)
