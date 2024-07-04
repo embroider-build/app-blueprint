@@ -66,4 +66,10 @@ describe('basic functionality', function () {
 
     console.log(result.stdout);
   });
+
+  it('successfully optimizes deps', function () {
+    return execa('pnpm', ['vite', 'optimize', '--force'], {
+      cwd: join(tmpDir.path, appName),
+    });
+  });
 });
