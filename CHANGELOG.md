@@ -1,5 +1,18 @@
 # Changelog
 
+## Release (2024-07-25)
+
+@embroider/app-blueprint 0.5.1 (patch)
+
+#### :house: Internal
+* `@embroider/app-blueprint`
+  * [#44](https://github.com/embroider-build/app-blueprint/pull/44) change dependabot versioning strategy to increase ([@mansona](https://github.com/mansona))
+  * [#43](https://github.com/embroider-build/app-blueprint/pull/43) set packageManager in package.json and rely on that in CI ([@mansona](https://github.com/mansona))
+  * [#38](https://github.com/embroider-build/app-blueprint/pull/38) add a test that verifies that the esbuild step was successful ([@mansona](https://github.com/mansona))
+
+#### Committers: 1
+- Chris Manson ([@mansona](https://github.com/mansona))
+
 ## Release (2024-06-27)
 
 @embroider/app-blueprint 0.5.0 (minor)
