@@ -1,5 +1,16 @@
 # Changelog
 
+## Release (2024-08-03)
+
+@embroider/app-blueprint 0.5.2 (patch)
+
+#### :bug: Bug Fix
+* `@embroider/app-blueprint`
+  * [#47](https://github.com/embroider-build/app-blueprint/pull/47) Update to use explicit resolve.extensions ([@ef4](https://github.com/ef4))
+
+#### Committers: 1
+- Edward Faulkner ([@ef4](https://github.com/ef4))
+
 ## Release (2024-07-25)
 
 @embroider/app-blueprint 0.5.1 (patch)
