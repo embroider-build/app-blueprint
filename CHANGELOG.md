@@ -1,5 +1,16 @@
 # Changelog
 
+## Release (2024-08-06)
+
+@embroider/app-blueprint 0.6.0 (minor)
+
+#### :rocket: Enhancement
+* `@embroider/app-blueprint`
+  * [#50](https://github.com/embroider-build/app-blueprint/pull/50) add git ignore for tmp file ([@mansona](https://github.com/mansona))
+
+#### Committers: 1
+- Chris Manson ([@mansona](https://github.com/mansona))
+
 ## Release (2024-08-03)
 
 @embroider/app-blueprint 0.5.2 (patch)
