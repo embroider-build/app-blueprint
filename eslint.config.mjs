@@ -8,7 +8,11 @@ export default [
     languageOptions: { sourceType: 'commonjs' },
   },
   {
-    files: ['files/app/**/*.js', 'files-override/app/**/*.js'],
+    files: [
+      'files/app/**/*.js',
+      'files-override/app/**/*.js',
+      'files-override/tests/**/*.js',
+    ],
     languageOptions: {
       sourceType: 'module',
       globals: {
