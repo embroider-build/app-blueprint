@@ -2,8 +2,8 @@
   "solution": {
     "@embroider/app-blueprint": {
       "impact": "minor",
-      "oldVersion": "0.5.2",
-      "newVersion": "0.6.0",
+      "oldVersion": "0.6.0",
+      "newVersion": "0.7.0",
       "constraints": [
         {
           "impact": "minor",
@@ -13,5 +13,5 @@
       "pkgJSONPath": "./package.json"
     }
   },
-  "description": "## Release (2024-08-06)\n\n@embroider/app-blueprint 0.6.0 (minor)\n\n#### :rocket: Enhancement\n* `@embroider/app-blueprint`\n  * [#50](https://github.com/embroider-build/app-blueprint/pull/50) add git ignore for tmp file ([@mansona](https://github.com/mansona))\n\n#### Committers: 1\n- Chris Manson ([@mansona](https://github.com/mansona))\n"
+  "description": "## Release (2024-08-31)\n\n@embroider/app-blueprint 0.7.0 (minor)\n\n#### :rocket: Enhancement\n* `@embroider/app-blueprint`\n  * [#57](https://github.com/embroider-build/app-blueprint/pull/57) add fixes for new test structure ([@mansona](https://github.com/mansona))\n\n#### Committers: 1\n- Chris Manson ([@mansona](https://github.com/mansona))\n"
 }

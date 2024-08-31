@@ -1,5 +1,16 @@
 # Changelog
 
+## Release (2024-08-31)
+
+@embroider/app-blueprint 0.7.0 (minor)
+
+#### :rocket: Enhancement
+* `@embroider/app-blueprint`
+  * [#57](https://github.com/embroider-build/app-blueprint/pull/57) add fixes for new test structure ([@mansona](https://github.com/mansona))
+
+#### Committers: 1
+- Chris Manson ([@mansona](https://github.com/mansona))
+
 ## Release (2024-08-06)
 
 @embroider/app-blueprint 0.6.0 (minor)
