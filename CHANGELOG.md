@@ -2,6 +2,17 @@
 
 ## Release (2024-09-02)
 
+@embroider/app-blueprint 0.8.0 (minor)
+
+#### :rocket: Enhancement
+* `@embroider/app-blueprint`
+  * [#62](https://github.com/embroider-build/app-blueprint/pull/62) move the index.html into the root of the blueprint ([@mansona](https://github.com/mansona))
+
+#### Committers: 1
+- Chris Manson ([@mansona](https://github.com/mansona))
+
+## Release (2024-09-02)
+
 @embroider/app-blueprint 0.7.2 (patch)
 
 #### :bug: Bug Fix

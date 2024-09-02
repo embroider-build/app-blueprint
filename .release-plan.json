@@ -1,17 +1,17 @@
 {
   "solution": {
     "@embroider/app-blueprint": {
-      "impact": "patch",
-      "oldVersion": "0.7.1",
-      "newVersion": "0.7.2",
+      "impact": "minor",
+      "oldVersion": "0.7.2",
+      "newVersion": "0.8.0",
       "constraints": [
         {
-          "impact": "patch",
-          "reason": "Appears in changelog section :bug: Bug Fix"
+          "impact": "minor",
+          "reason": "Appears in changelog section :rocket: Enhancement"
         }
       ],
       "pkgJSONPath": "./package.json"
     }
   },
-  "description": "## Release (2024-09-02)\n\n@embroider/app-blueprint 0.7.2 (patch)\n\n#### :bug: Bug Fix\n* `@embroider/app-blueprint`\n  * [#60](https://github.com/embroider-build/app-blueprint/pull/60) Add /tmp/ to files-override/.gitignore ([@kiwiupover](https://github.com/kiwiupover))\n\n#### Committers: 1\n- Dave Laird ([@kiwiupover](https://github.com/kiwiupover))\n"
+  "description": "## Release (2024-09-02)\n\n@embroider/app-blueprint 0.8.0 (minor)\n\n#### :rocket: Enhancement\n* `@embroider/app-blueprint`\n  * [#62](https://github.com/embroider-build/app-blueprint/pull/62) move the index.html into the root of the blueprint ([@mansona](https://github.com/mansona))\n\n#### Committers: 1\n- Chris Manson ([@mansona](https://github.com/mansona))\n"
 }
