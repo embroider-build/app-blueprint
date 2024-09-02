@@ -2,8 +2,8 @@
   "solution": {
     "@embroider/app-blueprint": {
       "impact": "patch",
-      "oldVersion": "0.7.0",
-      "newVersion": "0.7.1",
+      "oldVersion": "0.7.1",
+      "newVersion": "0.7.2",
       "constraints": [
         {
           "impact": "patch",
@@ -13,5 +13,5 @@
       "pkgJSONPath": "./package.json"
     }
   },
-  "description": "## Release (2024-09-02)\n\n@embroider/app-blueprint 0.7.1 (patch)\n\n#### :bug: Bug Fix\n* `@embroider/app-blueprint`\n  * [#58](https://github.com/embroider-build/app-blueprint/pull/58) Fixes app import paths in index.html ([@kiwiupover](https://github.com/kiwiupover))\n\n#### Committers: 1\n- Dave Laird ([@kiwiupover](https://github.com/kiwiupover))\n"
+  "description": "## Release (2024-09-02)\n\n@embroider/app-blueprint 0.7.2 (patch)\n\n#### :bug: Bug Fix\n* `@embroider/app-blueprint`\n  * [#60](https://github.com/embroider-build/app-blueprint/pull/60) Add /tmp/ to files-override/.gitignore ([@kiwiupover](https://github.com/kiwiupover))\n\n#### Committers: 1\n- Dave Laird ([@kiwiupover](https://github.com/kiwiupover))\n"
 }
