@@ -1,17 +1,17 @@
 {
   "solution": {
     "@embroider/app-blueprint": {
-      "impact": "minor",
-      "oldVersion": "0.6.0",
-      "newVersion": "0.7.0",
+      "impact": "patch",
+      "oldVersion": "0.7.0",
+      "newVersion": "0.7.1",
       "constraints": [
         {
-          "impact": "minor",
-          "reason": "Appears in changelog section :rocket: Enhancement"
+          "impact": "patch",
+          "reason": "Appears in changelog section :bug: Bug Fix"
         }
       ],
       "pkgJSONPath": "./package.json"
     }
   },
-  "description": "## Release (2024-08-31)\n\n@embroider/app-blueprint 0.7.0 (minor)\n\n#### :rocket: Enhancement\n* `@embroider/app-blueprint`\n  * [#57](https://github.com/embroider-build/app-blueprint/pull/57) add fixes for new test structure ([@mansona](https://github.com/mansona))\n\n#### Committers: 1\n- Chris Manson ([@mansona](https://github.com/mansona))\n"
+  "description": "## Release (2024-09-02)\n\n@embroider/app-blueprint 0.7.1 (patch)\n\n#### :bug: Bug Fix\n* `@embroider/app-blueprint`\n  * [#58](https://github.com/embroider-build/app-blueprint/pull/58) Fixes app import paths in index.html ([@kiwiupover](https://github.com/kiwiupover))\n\n#### Committers: 1\n- Dave Laird ([@kiwiupover](https://github.com/kiwiupover))\n"
 }
