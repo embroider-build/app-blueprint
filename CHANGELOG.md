@@ -1,5 +1,16 @@
 # Changelog
 
+## Release (2024-09-02)
+
+@embroider/app-blueprint 0.7.1 (patch)
+
+#### :bug: Bug Fix
+* `@embroider/app-blueprint`
+  * [#58](https://github.com/embroider-build/app-blueprint/pull/58) Fixes app import paths in index.html ([@kiwiupover](https://github.com/kiwiupover))
+
+#### Committers: 1
+- Dave Laird ([@kiwiupover](https://github.com/kiwiupover))
+
 ## Release (2024-08-31)
 
 @embroider/app-blueprint 0.7.0 (minor)
