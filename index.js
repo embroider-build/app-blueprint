@@ -3,6 +3,7 @@ const fs = require('fs');
 const { join } = require('path');
 const emberCliUpdate = require('./lib/ember-cli-update');
 const copyWithTemplate = require('./lib/copy-with-template');
+const { rm } = require('fs/promises');
 
 const appBlueprint = Blueprint.lookup('app');
 
@@ -57,6 +58,12 @@ module.exports = {
   },
 
   async afterInstall(options) {
+    const filesToDelete = ['app/index.html'];
+
+    for (let file of filesToDelete) {
+      await rm(join(options.target, file));
+    }
+
     // there doesn't seem to be a way to tell ember-cli to not prompt to override files that were added in the beforeInstall
     // so I'm just copying a few over at this stage
     copyWithTemplate(
