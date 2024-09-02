@@ -3,6 +3,7 @@ import { join } from 'path';
 import tmp from 'tmp-promise';
 import { execa } from 'execa';
 import copyWithTemplate from '../lib/copy-with-template';
+import { existsSync } from 'fs';
 
 const blueprintPath = join(__dirname, '..');
 const appName = 'fancy-app-in-test';
@@ -35,6 +36,17 @@ describe('basic functionality', function () {
 
   afterAll(async () => {
     return tmpDir.cleanup();
+  });
+
+  it('verify files', async function () {
+    expect(
+      !existsSync(join(tmpDir.path, 'app/index.html')),
+      'the app index.html has been removed',
+    );
+    expect(
+      existsSync(join(tmpDir.path, 'index.html')),
+      'the root index.html has been added',
+    );
   });
 
   it('successfully builds', async function () {
