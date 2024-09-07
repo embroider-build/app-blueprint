@@ -12,24 +12,20 @@ import {
 import { resolve } from 'path';
 import { babel } from '@rollup/plugin-babel';
 
-const root = 'tmp/rewritten-app';
-const extensions = [
-  '.mjs',
-  '.gjs',
-  '.js',
-  '.mts',
-  '.gts',
-  '.ts',
-  '.hbs',
-  '.json',
-];
-
 export default defineConfig(({ mode }) => {
   return {
-    root,
     cacheDir: resolve('node_modules', '.vite'),
     resolve: {
-      extensions,
+      extensions: [
+        '.mjs',
+        '.gjs',
+        '.js',
+        '.mts',
+        '.gts',
+        '.ts',
+        '.hbs',
+        '.json',
+      ],
     },
     plugins: [
       hbs(),
@@ -42,24 +38,25 @@ export default defineConfig(({ mode }) => {
 
       babel({
         babelHelpers: 'runtime',
-        extensions,
+
+        // this needs .hbs because our hbs() plugin above converts them to
+        // javascript but the javascript still also needs babel, but we don't want
+        // to rename them because vite isn't great about knowing how to hot-reload
+        // them if we resolve them to made-up names.
+        extensions: ['.gjs', '.js', '.hbs', '.ts', '.gts'],
       }),
     ],
     optimizeDeps: optimizeDeps(),
-    publicDir: resolve(process.cwd(), 'public'),
     server: {
       port: 4200,
-      watch: {
-        ignored: ['!**/tmp/rewritten-app/**'],
-      },
     },
     build: {
-      outDir: resolve(process.cwd(), 'dist'),
+      outDir: 'dist',
       rollupOptions: {
         input: {
-          main: resolve(root, 'index.html'),
+          main: 'index.html',
           ...(shouldBuildTests(mode)
-            ? { tests: resolve(root, 'tests/index.html') }
+            ? { tests: 'tests/index.html' }
             : undefined),
         },
       },
