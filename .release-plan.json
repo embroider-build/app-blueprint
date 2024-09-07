@@ -2,8 +2,8 @@
   "solution": {
     "@embroider/app-blueprint": {
       "impact": "minor",
-      "oldVersion": "0.7.2",
-      "newVersion": "0.8.0",
+      "oldVersion": "0.8.0",
+      "newVersion": "0.9.0",
       "constraints": [
         {
           "impact": "minor",
@@ -13,5 +13,5 @@
       "pkgJSONPath": "./package.json"
     }
   },
-  "description": "## Release (2024-09-02)\n\n@embroider/app-blueprint 0.8.0 (minor)\n\n#### :rocket: Enhancement\n* `@embroider/app-blueprint`\n  * [#62](https://github.com/embroider-build/app-blueprint/pull/62) move the index.html into the root of the blueprint ([@mansona](https://github.com/mansona))\n\n#### Committers: 1\n- Chris Manson ([@mansona](https://github.com/mansona))\n"
+  "description": "## Release (2024-09-07)\n\n@embroider/app-blueprint 0.9.0 (minor)\n\n#### :rocket: Enhancement\n* `@embroider/app-blueprint`\n  * [#65](https://github.com/embroider-build/app-blueprint/pull/65) update to work without app rewriting ([@mansona](https://github.com/mansona))\n\n#### Committers: 1\n- Chris Manson ([@mansona](https://github.com/mansona))\n"
 }
