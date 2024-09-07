@@ -24,6 +24,3 @@
 
 # broccoli-debug
 /DEBUG/
-
-# temporary until https://github.com/embroider-build/embroider/issues/2020 is merged
-/tmp/

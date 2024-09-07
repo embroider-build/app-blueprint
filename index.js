@@ -82,6 +82,16 @@ module.exports = {
       'test:ember': 'vite build --mode test && ember test --path dist',
     };
 
+    json['ember-addon'] = {
+      type: 'app',
+      version: 2,
+    };
+
+    json.exports = {
+      './tests/*': './tests/*',
+      './*': './app/*',
+    };
+
     fs.writeFileSync(packageJson, JSON.stringify(json, null, 2));
 
     await emberCliUpdate({
