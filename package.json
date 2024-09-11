@@ -1,6 +1,6 @@
 {
   "name": "@embroider/app-blueprint",
-  "version": "0.9.0",
+  "version": "0.10.0",
   "description": "Blueprint for next generation of Ember apps",
   "keywords": [
     "ember-blueprint"
