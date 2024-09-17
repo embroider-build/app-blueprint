@@ -3,7 +3,7 @@ import { join } from 'path';
 import tmp from 'tmp-promise';
 import { execa } from 'execa';
 import copyWithTemplate from '../lib/copy-with-template';
-import { existsSync } from 'fs';
+import { existsSync, writeFileSync } from 'fs';
 
 const blueprintPath = join(__dirname, '..');
 const appName = 'fancy-app-in-test';
@@ -77,6 +77,72 @@ describe('basic functionality', function () {
     expect(result.stdout).to.contain('Acceptance | styles: visiting /styles');
 
     console.log(result.stdout);
+  });
+
+  it('successfully runs tests in dev mode', async function () {
+    await execa({
+      cwd: join(tmpDir.path, appName),
+    })`pnpm install --save-dev testem http-proxy`;
+    let appURL;
+
+    let server;
+
+    try {
+      server = execa('pnpm', ['start'], {
+        cwd: join(tmpDir.path, appName),
+      });
+
+      await new Promise((resolve) => {
+        server.stdout.on('data', (line) => {
+          let result = /Local:\s+(https?:\/\/.*)\//g.exec(line.toString());
+
+          if (result) {
+            appURL = result[1];
+            resolve();
+          }
+        });
+      });
+
+      writeFileSync(
+        join(tmpDir.path, appName, 'testem-dev.js'),
+        `module.exports = {
+  test_page: 'tests/index.html?hidepassed',
+  disable_watching: true,
+  launch_in_ci: ['Chrome'],
+  launch_in_dev: ['Chrome'],
+  browser_start_timeout: 120,
+  browser_args: {
+    Chrome: {
+      ci: [
+        // --no-sandbox is needed when running Chrome inside a container
+        process.env.CI ? '--no-sandbox' : null,
+        '--headless',
+        '--disable-dev-shm-usage',
+        '--disable-software-rasterizer',
+        '--mute-audio',
+        '--remote-debugging-port=0',
+        '--window-size=1440,900',
+      ].filter(Boolean),
+    },
+  },
+  middleware: [
+    require(__dirname + '/testem-proxy.js')('${appURL}')
+  ],
+};
+`,
+      );
+
+      let testResult = await execa(
+        'pnpm',
+        ['testem', '--file', 'testem-dev.js', 'ci'],
+        {
+          cwd: join(tmpDir.path, appName),
+        },
+      );
+      expect(testResult.exitCode).to.eq(0, testResult.output);
+    } finally {
+      server?.kill('SIGINT');
+    }
   });
 
   it('successfully optimizes deps', function () {
