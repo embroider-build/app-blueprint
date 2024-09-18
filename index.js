@@ -37,6 +37,8 @@ module.exports = {
         'vite',
         '@rollup/plugin-babel',
         'decorator-transforms',
+        '@babel/plugin-transform-runtime',
+        'babel-plugin-ember-template-compilation',
       ],
       packageManager: options.packageManager,
     });
