@@ -30,6 +30,7 @@
     "globals": "^15.3.0",
     "prettier": "^3.2.5",
     "release-plan": "^0.9.0",
+    "strip-ansi": "^7.1.0",
     "tmp-promise": "^3.0.3",
     "vitest": "^1.6.0"
   },
