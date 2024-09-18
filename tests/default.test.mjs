@@ -36,7 +36,11 @@ describe('basic functionality', function () {
   });
 
   afterAll(async () => {
-    return tmpDir.cleanup();
+    try {
+      await tmpDir.cleanup();
+    } catch {
+      // if it fails to cleaup we don't want to break CI
+    }
   });
 
   it('verify files', async function () {
