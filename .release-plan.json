@@ -1,17 +1,21 @@
 {
   "solution": {
     "@embroider/app-blueprint": {
-      "impact": "minor",
-      "oldVersion": "0.9.0",
-      "newVersion": "0.10.0",
+      "impact": "patch",
+      "oldVersion": "0.10.0",
+      "newVersion": "0.10.1",
       "constraints": [
         {
-          "impact": "minor",
-          "reason": "Appears in changelog section :rocket: Enhancement"
+          "impact": "patch",
+          "reason": "Appears in changelog section :bug: Bug Fix"
+        },
+        {
+          "impact": "patch",
+          "reason": "Appears in changelog section :house: Internal"
         }
       ],
       "pkgJSONPath": "./package.json"
     }
   },
-  "description": "## Release (2024-09-11)\n\n@embroider/app-blueprint 0.10.0 (minor)\n\n#### :rocket: Enhancement\n* `@embroider/app-blueprint`\n  * [#68](https://github.com/embroider-build/app-blueprint/pull/68) update to user-controlled babel file ([@mansona](https://github.com/mansona))\n\n#### Committers: 1\n- Chris Manson ([@mansona](https://github.com/mansona))\n"
+  "description": "## Release (2024-09-18)\n\n@embroider/app-blueprint 0.10.1 (patch)\n\n#### :bug: Bug Fix\n* `@embroider/app-blueprint`\n  * [#70](https://github.com/embroider-build/app-blueprint/pull/70) fix: Uninstall task fails gracefully when given packages are not found ([@MichalBryxi](https://github.com/MichalBryxi))\n  * [#73](https://github.com/embroider-build/app-blueprint/pull/73) recreate issue with decorator transforms in tests and fix it ([@mansona](https://github.com/mansona))\n\n#### :house: Internal\n* `@embroider/app-blueprint`\n  * [#71](https://github.com/embroider-build/app-blueprint/pull/71) add a test for dev mode tests ([@mansona](https://github.com/mansona))\n\n#### Committers: 2\n- Chris Manson ([@mansona](https://github.com/mansona))\n- Michal Bryxí ([@MichalBryxi](https://github.com/MichalBryxi))\n"
 }

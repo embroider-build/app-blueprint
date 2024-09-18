@@ -1,5 +1,22 @@
 # Changelog
 
+## Release (2024-09-18)
+
+@embroider/app-blueprint 0.10.1 (patch)
+
+#### :bug: Bug Fix
+* `@embroider/app-blueprint`
+  * [#70](https://github.com/embroider-build/app-blueprint/pull/70) fix: Uninstall task fails gracefully when given packages are not found ([@MichalBryxi](https://github.com/MichalBryxi))
+  * [#73](https://github.com/embroider-build/app-blueprint/pull/73) recreate issue with decorator transforms in tests and fix it ([@mansona](https://github.com/mansona))
+
+#### :house: Internal
+* `@embroider/app-blueprint`
+  * [#71](https://github.com/embroider-build/app-blueprint/pull/71) add a test for dev mode tests ([@mansona](https://github.com/mansona))
+
+#### Committers: 2
+- Chris Manson ([@mansona](https://github.com/mansona))
+- Michal Bryxí ([@MichalBryxi](https://github.com/MichalBryxi))
+
 ## Release (2024-09-11)
 
 @embroider/app-blueprint 0.10.0 (minor)
