@@ -42,20 +42,28 @@ module.exports = {
     });
 
     let uninstallTask = this.taskFor('npm-uninstall');
-    await uninstallTask.run({
-      'save-dev': true,
-      verbose: false,
-      packages: [
-        'ember-fetch',
-        'broccoli-asset-rev',
-        'ember-cli-app-version',
-        'ember-cli-clean-css',
-        'ember-cli-dependency-checker',
-        'ember-cli-sri',
-        'ember-cli-terser',
-      ],
-      packageManager: options.packageManager,
-    });
+    const packages = [
+      'ember-fetch',
+      'broccoli-asset-rev',
+      'ember-cli-app-version',
+      'ember-cli-clean-css',
+      'ember-cli-dependency-checker',
+      'ember-cli-sri',
+      'ember-cli-terser',
+    ];
+
+    for (const package of packages) {
+      try {
+        await uninstallTask.run({
+          'save-dev': true,
+          verbose: false,
+          packages: [package],
+          packageManager: options.packageManager,
+        });
+      } catch {
+        console.log(`Could not uninstall ${package}`);
+      }
+    }
   },
 
   async afterInstall(options) {
