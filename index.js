@@ -124,6 +124,7 @@ module.exports = {
         'vite',
         '@rollup/plugin-babel',
         'decorator-transforms',
+        '@babel/plugin-transform-runtime',
 
         // Dependencies out of date from upstream
         // (or waiting for the release train to catch up)
