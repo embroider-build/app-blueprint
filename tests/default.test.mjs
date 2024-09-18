@@ -4,6 +4,7 @@ import tmp from 'tmp-promise';
 import { execa } from 'execa';
 import copyWithTemplate from '../lib/copy-with-template';
 import { existsSync, writeFileSync } from 'fs';
+import stripAnsi from 'strip-ansi';
 
 const blueprintPath = join(__dirname, '..');
 const appName = 'fancy-app-in-test';
@@ -94,7 +95,9 @@ describe('basic functionality', function () {
 
       await new Promise((resolve) => {
         server.stdout.on('data', (line) => {
-          let result = /Local:\s+(https?:\/\/.*)\//g.exec(line.toString());
+          let result = /Local:\s+(https?:\/\/.*)\//g.exec(
+            stripAnsi(line.toString()),
+          );
 
           if (result) {
             appURL = result[1];

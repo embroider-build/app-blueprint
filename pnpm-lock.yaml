@@ -42,6 +42,9 @@ importers:
       release-plan:
         specifier: ^0.9.0
         version: 0.9.0(encoding@0.1.13)
+      strip-ansi:
+        specifier: ^7.1.0
+        version: 7.1.0
       tmp-promise:
         specifier: ^3.0.3
         version: 3.0.3
