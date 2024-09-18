@@ -39,6 +39,7 @@ module.exports = {
         'decorator-transforms',
         '@babel/plugin-transform-runtime',
         'babel-plugin-ember-template-compilation',
+        'github:ember-cli/ember-cli#remove-types-babel',
       ],
       packageManager: options.packageManager,
     });
