@@ -36,6 +36,7 @@ module.exports = {
         '@embroider/config-meta-loader@unstable',
         'vite',
         '@rollup/plugin-babel',
+        'decorator-transforms',
       ],
       packageManager: options.packageManager,
     });
