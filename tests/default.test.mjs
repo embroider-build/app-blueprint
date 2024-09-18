@@ -157,4 +157,10 @@ describe('basic functionality', function () {
       cwd: join(tmpDir.path, appName),
     });
   });
+
+  it('can run generators', function () {
+    return execa('pnpm', ['ember', 'g', 'route', 'fancy'], {
+      cwd: join(tmpDir.path, appName),
+    });
+  });
 });
