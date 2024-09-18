@@ -59,7 +59,7 @@ module.exports = {
           packages: [package],
           packageManager: options.packageManager,
         });
-      } catch (e) {
+      } catch {
         console.log(`Could not uninstall ${package}`);
       }
     }
