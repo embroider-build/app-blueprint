@@ -136,6 +136,10 @@ describe('basic functionality', function () {
       it('successfully optimizes deps', function () {
         return project.execa('pnpm', ['vite', 'optimize', '--force']);
       });
+
+      it('can run generators', function () {
+        return project.execa('pnpm', ['ember', 'g', 'route', 'fancy']);
+      });
     });
   }
 });
