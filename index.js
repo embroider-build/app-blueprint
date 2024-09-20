@@ -37,6 +37,9 @@ module.exports = {
         'vite',
         '@rollup/plugin-babel',
         'decorator-transforms',
+        '@babel/plugin-transform-runtime',
+        'babel-plugin-ember-template-compilation',
+        'github:ember-cli/ember-cli#remove-types-babel',
       ],
       packageManager: options.packageManager,
     });
