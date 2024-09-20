@@ -36,5 +36,5 @@ Note: replace `your-app-name` with your existing app name (from the `package.jso
 Use [ember-cli-update](https://github.com/ember-cli/ember-cli-update) to update to later versions of the blueprint:
 
 ```bash
-pnpx ember-cli-update
+pnpm dlx ember-cli-update
 ```
