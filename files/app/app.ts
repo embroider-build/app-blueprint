@@ -7,7 +7,7 @@ import config from './config/environment';
 let d = window.define;
 
 for (const [name, module] of Object.entries(compatModules)) {
-  d(name, function () {
+  d(name, function() {
     return module;
   });
 }
