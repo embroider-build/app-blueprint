@@ -11,6 +11,10 @@ const SCENARIOS = [
     ],
     fixturePath: join(import.meta.dirname, 'fixture'),
   },
+  {
+    flags: ['--typescript'],
+    fixturePath: join(import.meta.dirname, 'fixture-ts'),
+  },
 ];
 
 describe('basic functionality', function () {

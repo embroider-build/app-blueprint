@@ -1,4 +1,4 @@
-import { defineConfig } from 'vite';
+import { defineConfig } from "vite";
 import {
   resolver,
   hbs,
@@ -8,18 +8,18 @@ import {
   compatPrebuild,
   assets,
   contentFor,
-} from '@embroider/vite';
-import { babel } from '@rollup/plugin-babel';
+} from "@embroider/vite";
+import { babel } from "@rollup/plugin-babel";
 
 const extensions = [
-  '.mjs',
-  '.gjs',
-  '.js',
-  '.mts',
-  '.gts',
-  '.ts',
-  '.hbs',
-  '.json',
+  ".mjs",
+  ".gjs",
+  ".js",
+  ".mts",
+  ".gts",
+  ".ts",
+  ".hbs",
+  ".json",
 ];
 
 export default defineConfig(({ mode }) => {
@@ -37,7 +37,7 @@ export default defineConfig(({ mode }) => {
       contentFor(),
 
       babel({
-        babelHelpers: 'runtime',
+        babelHelpers: "runtime",
         extensions,
       }),
     ],
@@ -46,12 +46,12 @@ export default defineConfig(({ mode }) => {
       port: 4200,
     },
     build: {
-      outDir: 'dist',
+      outDir: "dist",
       rollupOptions: {
         input: {
-          main: 'index.html',
+          main: "index.html",
           ...(shouldBuildTests(mode)
-            ? { tests: 'tests/index.html' }
+            ? { tests: "tests/index.html" }
             : undefined),
         },
       },
@@ -60,5 +60,5 @@ export default defineConfig(({ mode }) => {
 });
 
 function shouldBuildTests(mode) {
-  return mode !== 'production' || process.env.FORCE_BUILD_TESTS;
+  return mode !== "production" || process.env.FORCE_BUILD_TESTS;
 }
