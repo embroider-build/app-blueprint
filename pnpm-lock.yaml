@@ -39,6 +39,9 @@ importers:
       prettier:
         specifier: ^3.2.5
         version: 3.2.5
+      prettier-plugin-ember-template-tag:
+        specifier: ^2.0.2
+        version: 2.0.2(prettier@3.2.5)
       release-plan:
         specifier: ^0.9.0
         version: 0.9.0(encoding@0.1.13)
@@ -1450,6 +1453,9 @@ packages:
   content-disposition@0.5.4:
     resolution: {integrity: sha512-FveZTNuGw04cxlAiWbzi6zTAL/lhehaWbTtgluJh4/E95DqMwTmha3KZN1aAWA8cFIhHzMZUvLevkw5Rqk+tSQ==}
     engines: {node: '>= 0.6'}
+
+  content-tag@1.2.2:
+    resolution: {integrity: sha512-9guqKIx2H+78N17otBpl8yLZbQGL5q1vBO/jDb3gF2JjixtcVpC62jDUNxjVMNoaZ09oxRX84ZOD6VX02qkVvg==}
 
   content-tag@2.0.1:
     resolution: {integrity: sha512-jxsETSDs5NbNwyiDuIp672fUMhUyu8Qxc5MOBOJOcgW/fQESI6o5K1LBDrnEE7Bh810a685lWEZHTF4jQYGEEw==}
@@ -3292,6 +3298,12 @@ packages:
   prettier-linter-helpers@1.0.0:
     resolution: {integrity: sha512-GbK2cP9nraSSUF9N2XwUwqfzlAFlMNYYl+ShE/V+H8a9uNl/oUqB1w2EL54Jh0OlyRSd8RfWYJ3coVS4TROP2w==}
     engines: {node: '>=6.0.0'}
+
+  prettier-plugin-ember-template-tag@2.0.2:
+    resolution: {integrity: sha512-eSEnrxdD3NtMyIGwG2FxcTPOdpcbCK7VnBNhAufdaoeOIs+mNwmTsZdkWxr/LMhBdgtR1IUQB0l0YQhUQGz6kQ==}
+    engines: {node: 18.* || >= 20}
+    peerDependencies:
+      prettier: '>= 3.0.0'
 
   prettier@2.8.8:
     resolution: {integrity: sha512-tdN8qQGvNjw4CHbY+XXk0JgCXn9QiF21a55rBe5LJAU+kDyC4WQn4+awm2Xfk2lQMk5fKup9XgzTZtGkjBdP9Q==}
@@ -5767,6 +5779,8 @@ snapshots:
     dependencies:
       safe-buffer: 5.2.1
 
+  content-tag@1.2.2: {}
+
   content-tag@2.0.1: {}
 
   content-type@1.0.5: {}
@@ -7922,6 +7936,14 @@ snapshots:
   prettier-linter-helpers@1.0.0:
     dependencies:
       fast-diff: 1.3.0
+
+  prettier-plugin-ember-template-tag@2.0.2(prettier@3.2.5):
+    dependencies:
+      '@babel/core': 7.24.6
+      content-tag: 1.2.2
+      prettier: 3.2.5
+    transitivePeerDependencies:
+      - supports-color
 
   prettier@2.8.8: {}
 
