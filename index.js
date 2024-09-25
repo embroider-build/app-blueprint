@@ -45,7 +45,12 @@ module.exports = {
       ...Object.keys(manifest.devDependencies || {}),
     ];
 
-    let ensureLatestDeps = ['eslint', 'eslint-plugin-ember', 'eslint-plugin-n'];
+    let ensureLatestDeps = [
+      'eslint',
+      'eslint-plugin-ember',
+      'eslint-plugin-n',
+      '@babel/eslint-parser',
+    ];
 
     // this.addPackagesToProject doesn't respect the packageManager that the blueprint specified 🙈 so we're skipping a level here
     let installTask = this.taskFor('npm-install');
@@ -65,6 +70,8 @@ module.exports = {
         'ember-cli-terser',
 
         ...ensureLatestDeps,
+        // Linting
+        '@babel/plugin-proposal-decorators',
       ].filter((depToRemove) => existingDeps.includes(depToRemove)),
       packageManager: options.packageManager,
     });
@@ -85,6 +92,7 @@ module.exports = {
         ...ensureLatestDeps,
         // Needed for eslint
         'globals',
+        'babel-plugin-ember-template-compilation',
       ],
       packageManager: options.packageManager,
     });
@@ -95,6 +103,8 @@ module.exports = {
       'app/index.html',
       // replaced with the new ESLint flat config
       '.eslintrc.js',
+      // This file is not supported in ESLint 9
+      '.eslintignore',
     ];
 
     for (let file of filesToDelete) {

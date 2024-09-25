@@ -15,12 +15,6 @@ import babelParser from '@babel/eslint-parser';
 const esmParserOptions = {
   ecmaFeatures: { modules: true },
   ecmaVersion: 'latest',
-  requireConfigFile: false,
-  babelOptions: {
-    plugins: [
-      ['@babel/plugin-proposal-decorators', { decoratorsBeforeExport: true }],
-    ],
-  },
 };
 
 export default [
@@ -76,18 +70,43 @@ export default [
    * CJS node files
    */
   {
-    files: ['**/*.cjs', 'config/**/*.js'],
+    files: [
+      '**/*.cjs',
+      'config/**/*.js',
+      'testem.js',
+      '.prettierrc.js',
+      '.stylelintrc.js',
+      '.template-lintrc.js',
+      'ember-cli-build.js',
+    ],
     plugins: {
       n,
     },
 
     languageOptions: {
+      sourceType: 'script',
+      ecmaVersion: 'latest',
       globals: {
         ...globals.node,
       },
+    },
+  },
+  /**
+   * ESM node files
+   */
+  {
+    files: ['*.mjs'],
+    plugins: {
+      n,
+    },
 
-      ecmaVersion: 6,
-      sourceType: 'script',
+    languageOptions: {
+      sourceType: 'module',
+      ecmaVersion: 'latest',
+      parserOptions: esmParserOptions,
+      globals: {
+        ...globals.node,
+      },
     },
   },
 ];
