@@ -61,10 +61,10 @@ export default [
     },
   },
   {
+    files: ['tests/**/*-test.{js,gjs}'],
     plugins: {
       qunit,
     },
-    files: ['tests/**/*-test.{js,gjs}'],
   },
   /**
    * CJS node files
