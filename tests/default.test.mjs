@@ -54,6 +54,14 @@ describe('basic functionality', function () {
     );
   });
 
+  it('successfully lints', async function () {
+    let result = await execa('pnpm', ['lint'], {
+      cwd: join(tmpDir.path, appName),
+    });
+
+    console.log(result.stdout);
+  });
+
   it('successfully builds', async function () {
     let result = await execa('pnpm', ['build'], {
       cwd: join(tmpDir.path, appName),
