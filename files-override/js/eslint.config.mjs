@@ -21,7 +21,7 @@ export default [
   js.configs.recommended,
   prettier,
   {
-    ignores: ['vendor/', 'dist/', 'node_modules/', 'coverage/', '!**/.*'],
+    ignores: ['dist/', 'node_modules/', 'coverage/', '!**/.*'],
     linterOptions: {
       reportUnusedDisableDirectives: 'error',
     },
