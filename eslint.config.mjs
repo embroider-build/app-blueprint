@@ -9,9 +9,9 @@ export default [
   },
   {
     files: [
-      'files/app/**/*.js',
-      'files-override/app/**/*.js',
-      'files-override/tests/**/*.js',
+      'files/*/app/**/*.js',
+      'files-override/*/app/**/*.js',
+      'files-override/*/tests/**/*.js',
     ],
     languageOptions: {
       sourceType: 'module',
