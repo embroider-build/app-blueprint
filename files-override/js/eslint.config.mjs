@@ -36,7 +36,7 @@ export default [
       },
     },
     plugins: {
-      ember: ember,
+      ember,
     },
     rules: {
       ...emberRecommended.rules,
@@ -53,7 +53,7 @@ export default [
       },
     },
     plugins: {
-      ember: ember,
+      ember,
     },
     rules: {
       ...emberRecommended.rules,
