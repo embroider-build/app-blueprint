@@ -74,6 +74,7 @@ export default [
       '**/*.cjs',
       'config/**/*.js',
       'testem.js',
+      'testem*.js',
       '.prettierrc.js',
       '.stylelintrc.js',
       '.template-lintrc.js',

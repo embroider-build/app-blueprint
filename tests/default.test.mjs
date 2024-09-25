@@ -33,6 +33,11 @@ describe('basic functionality', function () {
     copyWithTemplate(join(__dirname, 'fixture'), join(tmpDir.path, appName), {
       name: appName,
     });
+
+    // Sync the lints for the fixtures with the project's config
+    await execa(`pnpm`, ['lint:fix'], {
+      cwd: join(tmpDir.path, appName),
+    });
   });
 
   afterAll(async () => {
