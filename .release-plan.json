@@ -1,13 +1,17 @@
 {
   "solution": {
     "@embroider/app-blueprint": {
-      "impact": "patch",
-      "oldVersion": "0.10.0",
-      "newVersion": "0.10.1",
+      "impact": "minor",
+      "oldVersion": "0.10.1",
+      "newVersion": "0.11.0",
       "constraints": [
         {
+          "impact": "minor",
+          "reason": "Appears in changelog section :rocket: Enhancement"
+        },
+        {
           "impact": "patch",
-          "reason": "Appears in changelog section :bug: Bug Fix"
+          "reason": "Appears in changelog section :memo: Documentation"
         },
         {
           "impact": "patch",
@@ -17,5 +21,5 @@
       "pkgJSONPath": "./package.json"
     }
   },
-  "description": "## Release (2024-09-18)\n\n@embroider/app-blueprint 0.10.1 (patch)\n\n#### :bug: Bug Fix\n* `@embroider/app-blueprint`\n  * [#70](https://github.com/embroider-build/app-blueprint/pull/70) fix: Uninstall task fails gracefully when given packages are not found ([@MichalBryxi](https://github.com/MichalBryxi))\n  * [#73](https://github.com/embroider-build/app-blueprint/pull/73) recreate issue with decorator transforms in tests and fix it ([@mansona](https://github.com/mansona))\n\n#### :house: Internal\n* `@embroider/app-blueprint`\n  * [#71](https://github.com/embroider-build/app-blueprint/pull/71) add a test for dev mode tests ([@mansona](https://github.com/mansona))\n\n#### Committers: 2\n- Chris Manson ([@mansona](https://github.com/mansona))\n- Michal Bryxí ([@MichalBryxi](https://github.com/MichalBryxi))\n"
+  "description": "## Release (2024-09-26)\n\n@embroider/app-blueprint 0.11.0 (minor)\n\n#### :rocket: Enhancement\n* `@embroider/app-blueprint`\n  * [#86](https://github.com/embroider-build/app-blueprint/pull/86) use the new load initializers and resolver ([@mansona](https://github.com/mansona))\n  * [#83](https://github.com/embroider-build/app-blueprint/pull/83) Add prettier config (with `<template>` support ([@NullVoxPopuli](https://github.com/NullVoxPopuli))\n\n#### :memo: Documentation\n* `@embroider/app-blueprint`\n  * [#76](https://github.com/embroider-build/app-blueprint/pull/76) pnpx => pnpm dlx ([@NullVoxPopuli](https://github.com/NullVoxPopuli))\n\n#### :house: Internal\n* `@embroider/app-blueprint`\n  * [#84](https://github.com/embroider-build/app-blueprint/pull/84) Run linting on the generated project in CI // add a working eslintconfig ([@NullVoxPopuli](https://github.com/NullVoxPopuli))\n  * [#82](https://github.com/embroider-build/app-blueprint/pull/82) Split the lint and test jobs so we can see tests running during draft work ([@NullVoxPopuli](https://github.com/NullVoxPopuli))\n  * [#81](https://github.com/embroider-build/app-blueprint/pull/81) Prepare for typescript support by moving all the js files into a js folder ([@NullVoxPopuli](https://github.com/NullVoxPopuli))\n\n#### Committers: 2\n- Chris Manson ([@mansona](https://github.com/mansona))\n- [@NullVoxPopuli](https://github.com/NullVoxPopuli)\n"
 }
