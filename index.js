@@ -93,6 +93,7 @@ module.exports = {
         // Needed for eslint
         'globals',
         'babel-plugin-ember-template-compilation',
+        'prettier-plugin-ember-template-tag',
       ],
       packageManager: options.packageManager,
     });
@@ -105,6 +106,8 @@ module.exports = {
       '.eslintrc.js',
       // This file is not supported in ESLint 9
       '.eslintignore',
+      // replaced with .prettierrc.cjs
+      '.prettierrc.js',
     ];
 
     for (let file of filesToDelete) {
