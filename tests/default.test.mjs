@@ -1,68 +1,33 @@
-import { describe, it, beforeAll, afterAll, expect } from 'vitest';
+import { describe, it, expect } from 'vitest';
 import { join } from 'path';
-import tmp from 'tmp-promise';
 import { execa } from 'execa';
-import copyWithTemplate from '../lib/copy-with-template';
 import { existsSync, writeFileSync } from 'fs';
 import stripAnsi from 'strip-ansi';
 import { emberCli } from './helpers.mjs';
 
-const blueprintPath = join(__dirname, '..');
 const appName = 'fancy-app-in-test';
 
+import { newProjectWithFixtures } from './helpers';
+
 describe('basic functionality', function () {
-  let tmpDir;
-
-  beforeAll(async () => {
-    tmpDir = await tmp.dir({ unsafeCleanup: true });
-
-    let emberCliArgs = [
-      'new',
-      appName,
-      '-b',
-      blueprintPath,
-      '--pnpm',
-      '--skip-git',
-    ];
-
-    await execa(emberCli, emberCliArgs, {
-      cwd: tmpDir.path,
-      preferLocal: true,
-    });
-
-    // apply the fixture on top of the generated app
-    copyWithTemplate(join(__dirname, 'fixture'), join(tmpDir.path, appName), {
-      name: appName,
-    });
-
-    // Sync the lints for the fixtures with the project's config
-    await execa(`pnpm`, ['lint:fix'], {
-      cwd: join(tmpDir.path, appName),
-    });
-  });
-
-  afterAll(async () => {
-    try {
-      await tmpDir.cleanup();
-    } catch {
-      // if it fails to cleaup we don't want to break CI
-    }
+  let project = newProjectWithFixtures({
+    fixturePath: join(__dirname, 'fixture'),
   });
 
   it('verify files', async function () {
     expect(
-      !existsSync(join(tmpDir.path, 'app/index.html')),
+      !existsSync(join(project.tmpDir(), 'app/index.html')),
       'the app index.html has been removed',
     );
     expect(
-      existsSync(join(tmpDir.path, 'index.html')),
+      existsSync(join(project.tmpDir(), 'index.html')),
       'the root index.html has been added',
     );
   });
 
   it('successfully lints', async function () {
     let result = await execa('pnpm', ['lint'], {
-      cwd: join(tmpDir.path, appName),
+      cwd: join(project.tmpDir(), appName),
     });
 
     console.log(result.stdout);
@@ -70,7 +35,7 @@ describe('basic functionality', function () {
 
   it('successfully builds', async function () {
     let result = await execa('pnpm', ['build'], {
-      cwd: join(tmpDir.path, appName),
+      cwd: join(project.tmpDir(), appName),
     });
 
     console.log(result.stdout);
@@ -81,7 +46,7 @@ describe('basic functionality', function () {
 
     try {
       result = await execa('pnpm', ['test:ember'], {
-        cwd: join(tmpDir.path, appName),
+        cwd: join(project.tmpDir(), appName),
       });
     } catch (err) {
       console.log(err.stdout, err.stderr);
@@ -100,7 +65,7 @@ describe('basic functionality', function () {
 
   it('successfully runs tests in dev mode', async function () {
     await execa({
-      cwd: join(tmpDir.path, appName),
+      cwd: join(project.tmpDir(), appName),
     })`pnpm install --save-dev testem http-proxy`;
     let appURL;
 
@@ -108,7 +73,7 @@ describe('basic functionality', function () {
 
     try {
       server = execa('pnpm', ['start'], {
-        cwd: join(tmpDir.path, appName),
+        cwd: join(project.tmpDir(), appName),
       });
 
       await new Promise((resolve) => {
@@ -125,7 +90,7 @@ describe('basic functionality', function () {
       });
 
       writeFileSync(
-        join(tmpDir.path, appName, 'testem-dev.js'),
+        join(project.tmpDir(), appName, 'testem-dev.js'),
         `module.exports = {
   test_page: 'tests/index.html?hidepassed',
   disable_watching: true,
@@ -157,7 +122,7 @@ describe('basic functionality', function () {
         'pnpm',
         ['testem', '--file', 'testem-dev.js', 'ci'],
         {
-          cwd: join(tmpDir.path, appName),
+          cwd: join(project.tmpDir(), appName),
         },
       );
       expect(testResult.exitCode).to.eq(0, testResult.output);
@@ -168,7 +133,7 @@ describe('basic functionality', function () {
 
   it('successfully optimizes deps', function () {
     return execa('pnpm', ['vite', 'optimize', '--force'], {
-      cwd: join(tmpDir.path, appName),
+      cwd: join(project.tmpDir(), appName),
     });
   });
 });
