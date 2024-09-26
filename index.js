@@ -3,7 +3,7 @@ const fs = require('fs');
 const { join } = require('path');
 const emberCliUpdate = require('./lib/ember-cli-update');
 const copyWithTemplate = require('./lib/copy-with-template');
-const { rm } = require('fs/promises');
+const { rm, readFile } = require('fs/promises');
 
 const appBlueprint = Blueprint.lookup('app');
 
@@ -36,8 +36,46 @@ module.exports = {
   },
 
   async updateDeps(options) {
+    let manifestPath = join(options.target, 'package.json');
+    let manifestBuffer = await readFile(manifestPath);
+    let manifest = JSON.parse(manifestBuffer.toString());
+
+    let existingDeps = [
+      ...Object.keys(manifest.dependencies || {}),
+      ...Object.keys(manifest.devDependencies || {}),
+    ];
+
+    let ensureLatestDeps = [
+      'eslint',
+      'eslint-plugin-ember',
+      'eslint-plugin-n',
+      '@babel/eslint-parser',
+    ];
+
     // this.addPackagesToProject doesn't respect the packageManager that the blueprint specified 🙈 so we're skipping a level here
     let installTask = this.taskFor('npm-install');
+    let uninstallTask = this.taskFor('npm-uninstall');
+
+    await uninstallTask.run({
+      'save-dev': true,
+      verbose: false,
+      packages: [
+        // Not needed anymore
+        'ember-fetch',
+        'broccoli-asset-rev',
+        'ember-cli-app-version',
+        'ember-cli-clean-css',
+        'ember-cli-dependency-checker',
+        'ember-cli-sri',
+        'ember-cli-terser',
+
+        ...ensureLatestDeps,
+        // Linting
+        '@babel/plugin-proposal-decorators',
+      ].filter((depToRemove) => existingDeps.includes(depToRemove)),
+      packageManager: options.packageManager,
+    });
+
     await installTask.run({
       'save-dev': true,
       verbose: false,
@@ -50,37 +88,24 @@ module.exports = {
         'vite',
         '@rollup/plugin-babel',
         'decorator-transforms',
+
+        ...ensureLatestDeps,
+        // Needed for eslint
+        'globals',
+        'babel-plugin-ember-template-compilation',
       ],
       packageManager: options.packageManager,
     });
-
-    let uninstallTask = this.taskFor('npm-uninstall');
-    const packages = [
-      'ember-fetch',
-      'broccoli-asset-rev',
-      'ember-cli-app-version',
-      'ember-cli-clean-css',
-      'ember-cli-dependency-checker',
-      'ember-cli-sri',
-      'ember-cli-terser',
-    ];
-
-    for (const package of packages) {
-      try {
-        await uninstallTask.run({
-          'save-dev': true,
-          verbose: false,
-          packages: [package],
-          packageManager: options.packageManager,
-        });
-      } catch {
-        console.log(`Could not uninstall ${package}`);
-      }
-    }
   },
 
   async afterInstall(options) {
-    const filesToDelete = ['app/index.html'];
+    const filesToDelete = [
+      'app/index.html',
+      // replaced with the new ESLint flat config
+      '.eslintrc.js',
+      // This file is not supported in ESLint 9
+      '.eslintignore',
+    ];
 
     for (let file of filesToDelete) {
       await rm(join(options.target, file));
@@ -124,5 +149,16 @@ module.exports = {
     });
 
     await this.updateDeps(options);
+
+    const lintFix = require('ember-cli/lib/utilities/lint-fix');
+
+    await lintFix.run({
+      // Mock Project
+      pkg: {
+        scripts: { 'lint:fix': true },
+      },
+      ui: this.ui,
+      root: options.target,
+    });
   },
 };

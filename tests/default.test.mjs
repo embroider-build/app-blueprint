@@ -33,6 +33,11 @@ describe('basic functionality', function () {
     copyWithTemplate(join(__dirname, 'fixture'), join(tmpDir.path, appName), {
       name: appName,
     });
+
+    // Sync the lints for the fixtures with the project's config
+    await execa(`pnpm`, ['lint:fix'], {
+      cwd: join(tmpDir.path, appName),
+    });
   });
 
   afterAll(async () => {
@@ -52,6 +57,14 @@ describe('basic functionality', function () {
       existsSync(join(tmpDir.path, 'index.html')),
       'the root index.html has been added',
     );
+  });
+
+  it('successfully lints', async function () {
+    let result = await execa('pnpm', ['lint'], {
+      cwd: join(tmpDir.path, appName),
+    });
+
+    console.log(result.stdout);
   });
 
   it('successfully builds', async function () {
