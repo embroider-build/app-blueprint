@@ -45,13 +45,6 @@ module.exports = {
       ...Object.keys(manifest.devDependencies || {}),
     ];
 
-    let ensureLatestDeps = [
-      'eslint',
-      'eslint-plugin-ember',
-      'eslint-plugin-n',
-      '@babel/eslint-parser',
-    ];
-
     // this.addPackagesToProject doesn't respect the packageManager that the blueprint specified 🙈 so we're skipping a level here
     let installTask = this.taskFor('npm-install');
     let uninstallTask = this.taskFor('npm-uninstall');
@@ -68,8 +61,6 @@ module.exports = {
         'ember-cli-dependency-checker',
         'ember-cli-sri',
         'ember-cli-terser',
-
-        ...ensureLatestDeps,
         // Linting
         '@babel/plugin-proposal-decorators',
       ].filter((depToRemove) => existingDeps.includes(depToRemove)),
@@ -89,7 +80,12 @@ module.exports = {
         '@rollup/plugin-babel',
         'decorator-transforms',
 
-        ...ensureLatestDeps,
+        'eslint@latest',
+        'eslint-plugin-ember@latest',
+        'eslint-plugin-n@latest',
+        '@babel/eslint-parser@latest',
+        'ember-resolver@latest',
+        'ember-load-initializers@latest',
         // Needed for eslint
         'globals',
         'babel-plugin-ember-template-compilation',
