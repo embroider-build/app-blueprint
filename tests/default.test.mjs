@@ -12,6 +12,8 @@ const appName = 'fancy-app-in-test';
 describe('basic functionality', function () {
   let tmpDir;
 
+  let emberCli = join(__dirname, '../node_modules/ember-cli/bin/ember');
+
   beforeAll(async () => {
     tmpDir = await tmp.dir({ unsafeCleanup: true });
 
@@ -24,7 +26,7 @@ describe('basic functionality', function () {
       '--skip-git',
     ];
 
-    await execa('ember', emberCliArgs, {
+    await execa(emberCli, emberCliArgs, {
       cwd: tmpDir.path,
       preferLocal: true,
     });
