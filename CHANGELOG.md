@@ -1,5 +1,28 @@
 # Changelog
 
+## Release (2024-09-26)
+
+@embroider/app-blueprint 0.11.0 (minor)
+
+#### :rocket: Enhancement
+* `@embroider/app-blueprint`
+  * [#86](https://github.com/embroider-build/app-blueprint/pull/86) use the new load initializers and resolver ([@mansona](https://github.com/mansona))
+  * [#83](https://github.com/embroider-build/app-blueprint/pull/83) Add prettier config (with `<template>` support ([@NullVoxPopuli](https://github.com/NullVoxPopuli))
+
+#### :memo: Documentation
+* `@embroider/app-blueprint`
+  * [#76](https://github.com/embroider-build/app-blueprint/pull/76) pnpx => pnpm dlx ([@NullVoxPopuli](https://github.com/NullVoxPopuli))
+
+#### :house: Internal
+* `@embroider/app-blueprint`
+  * [#84](https://github.com/embroider-build/app-blueprint/pull/84) Run linting on the generated project in CI // add a working eslintconfig ([@NullVoxPopuli](https://github.com/NullVoxPopuli))
+  * [#82](https://github.com/embroider-build/app-blueprint/pull/82) Split the lint and test jobs so we can see tests running during draft work ([@NullVoxPopuli](https://github.com/NullVoxPopuli))
+  * [#81](https://github.com/embroider-build/app-blueprint/pull/81) Prepare for typescript support by moving all the js files into a js folder ([@NullVoxPopuli](https://github.com/NullVoxPopuli))
+
+#### Committers: 2
+- Chris Manson ([@mansona](https://github.com/mansona))
+- [@NullVoxPopuli](https://github.com/NullVoxPopuli)
+
 ## Release (2024-09-18)
 
 @embroider/app-blueprint 0.10.1 (patch)
