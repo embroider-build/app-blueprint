@@ -65,6 +65,8 @@ export function resolveBin(packageName, binName = packageName) {
   return join(packageDir, binPath);
 }
 
-export function emberCLI() {
+function findEmber() {
   return resolveBin('ember-cli', 'ember');
 }
+
+export const emberCli = findEmber();

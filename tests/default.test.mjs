@@ -5,14 +5,13 @@ import { execa } from 'execa';
 import copyWithTemplate from '../lib/copy-with-template';
 import { existsSync, writeFileSync } from 'fs';
 import stripAnsi from 'strip-ansi';
+import { emberCli } from './helpers.mjs';
 
 const blueprintPath = join(__dirname, '..');
 const appName = 'fancy-app-in-test';
 
 describe('basic functionality', function () {
   let tmpDir;
-
-  let emberCli = join(__dirname, '../node_modules/ember-cli/bin/ember');
 
   beforeAll(async () => {
     tmpDir = await tmp.dir({ unsafeCleanup: true });
