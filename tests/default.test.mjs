@@ -5,6 +5,7 @@ import { execa } from 'execa';
 import copyWithTemplate from '../lib/copy-with-template';
 import { existsSync, writeFileSync } from 'fs';
 import stripAnsi from 'strip-ansi';
+import { emberCli } from './helpers.mjs';
 
 const blueprintPath = join(__dirname, '..');
 const appName = 'fancy-app-in-test';
@@ -24,7 +25,7 @@ describe('basic functionality', function () {
       '--skip-git',
     ];
 
-    await execa('ember', emberCliArgs, {
+    await execa(emberCli, emberCliArgs, {
       cwd: tmpDir.path,
       preferLocal: true,
     });
