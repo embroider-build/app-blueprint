@@ -19,6 +19,7 @@
   "dependencies": {
     "ember-cli": "^5.11.0",
     "lodash": "^4.17.21",
+    "package-up": "^5.0.0",
     "walk-sync": "^3.0.0"
   },
   "devDependencies": {
