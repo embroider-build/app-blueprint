@@ -3,11 +3,7 @@ import { join } from 'path';
 import { execa } from 'execa';
 import { existsSync, writeFileSync } from 'fs';
 import stripAnsi from 'strip-ansi';
-import { emberCli } from './helpers.mjs';
-
-const appName = 'fancy-app-in-test';
-
-import { newProjectWithFixtures } from './helpers';
+import { newProjectWithFixtures } from './helpers.mjs';
 
 describe('basic functionality', function () {
   let project = newProjectWithFixtures({
@@ -16,18 +12,18 @@ describe('basic functionality', function () {
 
   it('verify files', async function () {
     expect(
-      !existsSync(join(project.tmpDir(), 'app/index.html')),
+      !existsSync(join(project.dir(), 'app/index.html')),
       'the app index.html has been removed',
     );
     expect(
-      existsSync(join(project.tmpDir(), 'index.html')),
+      existsSync(join(project.dir(), 'index.html')),
       'the root index.html has been added',
     );
   });
 
   it('successfully lints', async function () {
     let result = await execa('pnpm', ['lint'], {
-      cwd: join(project.tmpDir(), appName),
+      cwd: project.dir(),
     });
 
     console.log(result.stdout);
@@ -35,7 +31,7 @@ describe('basic functionality', function () {
 
   it('successfully builds', async function () {
     let result = await execa('pnpm', ['build'], {
-      cwd: join(project.tmpDir(), appName),
+      cwd: project.dir(),
     });
 
     console.log(result.stdout);
@@ -46,7 +42,7 @@ describe('basic functionality', function () {
 
     try {
       result = await execa('pnpm', ['test:ember'], {
-        cwd: join(project.tmpDir(), appName),
+        cwd: project.dir(),
       });
     } catch (err) {
       console.log(err.stdout, err.stderr);
@@ -65,7 +61,7 @@ describe('basic functionality', function () {
 
   it('successfully runs tests in dev mode', async function () {
     await execa({
-      cwd: join(project.tmpDir(), appName),
+      cwd: project.dir(),
     })`pnpm install --save-dev testem http-proxy`;
     let appURL;
 
@@ -73,7 +69,7 @@ describe('basic functionality', function () {
 
     try {
       server = execa('pnpm', ['start'], {
-        cwd: join(project.tmpDir(), appName),
+        cwd: project.dir(),
       });
 
       await new Promise((resolve) => {
@@ -90,7 +86,7 @@ describe('basic functionality', function () {
       });
 
       writeFileSync(
-        join(project.tmpDir(), appName, 'testem-dev.js'),
+        join(project.dir(), 'testem-dev.js'),
         `module.exports = {
   test_page: 'tests/index.html?hidepassed',
   disable_watching: true,
@@ -122,7 +118,7 @@ describe('basic functionality', function () {
         'pnpm',
         ['testem', '--file', 'testem-dev.js', 'ci'],
         {
-          cwd: join(project.tmpDir(), appName),
+          cwd: project.dir(),
         },
       );
       expect(testResult.exitCode).to.eq(0, testResult.output);
@@ -133,7 +129,7 @@ describe('basic functionality', function () {
 
   it('successfully optimizes deps', function () {
     return execa('pnpm', ['vite', 'optimize', '--force'], {
-      cwd: join(project.tmpDir(), appName),
+      cwd: project.dir(),
     });
   });
 });

@@ -66,5 +66,6 @@ export function newProjectWithFixtures({
   return {
     tmpDir: () => tmpDir.path,
     appName: () => name,
+    dir: () => join(tmpDir.path, name),
   };
 }
