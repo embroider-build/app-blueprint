@@ -19,7 +19,6 @@
   "dependencies": {
     "ember-cli": "^5.11.0",
     "lodash": "^4.17.21",
-    "package-up": "^5.0.0",
     "resolve-bin": "^1.0.1",
     "walk-sync": "^3.0.0"
   },
