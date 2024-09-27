@@ -14,9 +14,6 @@ importers:
       lodash:
         specifier: ^4.17.21
         version: 4.17.21
-      resolve-bin:
-        specifier: ^1.0.1
-        version: 1.0.1
       walk-sync:
         specifier: ^3.0.0
         version: 3.0.0
@@ -48,6 +45,9 @@ importers:
       release-plan:
         specifier: ^0.9.0
         version: 0.9.0(encoding@0.1.13)
+      resolve-bin:
+        specifier: ^1.0.1
+        version: 1.0.1
       strip-ansi:
         specifier: ^7.1.0
         version: 7.1.0
