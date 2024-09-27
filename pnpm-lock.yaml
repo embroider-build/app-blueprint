@@ -17,6 +17,9 @@ importers:
       package-up:
         specifier: ^5.0.0
         version: 5.0.0
+      resolve-bin:
+        specifier: ^1.0.1
+        version: 1.0.1
       walk-sync:
         specifier: ^3.0.0
         version: 3.0.0
@@ -1940,6 +1943,9 @@ packages:
   find-index@1.1.1:
     resolution: {integrity: sha512-XYKutXMrIK99YMUPf91KX5QVJoG31/OsgftD6YoTPAObfQIxM4ziA9f0J1AsqKhJmo+IeaIPP0CFopTD4bdUBw==}
 
+  find-parent-dir@0.3.1:
+    resolution: {integrity: sha512-o4UcykWV/XN9wm+jMEtWLPlV8RXCZnMhQI6F6OdHeSez7iiJWePw8ijOlskJZMsaQoGR/b7dH6lO02HhaTN7+A==}
+
   find-up-simple@1.0.0:
     resolution: {integrity: sha512-q7Us7kcjj2VMePAa02hDAF6d+MzsdsAWEwYyOpwUtlerRBkOEPBCRZrAV4XfcSN8fHAgaD0hP7miwoay6DCprw==}
     engines: {node: '>=18'}
@@ -3470,6 +3476,9 @@ packages:
 
   requires-port@1.0.0:
     resolution: {integrity: sha512-KigOCHcocU3XODJxsu8i/j8T9tzT4adHiecwORRQ0ZZFcp7ahwXuRU1m+yuO90C5ZUyGeGfocHDI14M3L3yDAQ==}
+
+  resolve-bin@1.0.1:
+    resolution: {integrity: sha512-4G9C3udcDB1c9qaopB+9dygm2bMyF2LeJ2JHBIc24N7ob+UuSSwX3ID1hQwpDEQep9ZRNdhT//rgEd6xbWA/SA==}
 
   resolve-dir@1.0.1:
     resolution: {integrity: sha512-R7uiTjECzvOsWSfdM0QKFNBVFcK27aHOUwdvK53BcW8zqnGdYp0Fbj82cy54+2A4P2tFM22J5kRfe1R+lM/1yg==}
@@ -6509,6 +6518,8 @@ snapshots:
 
   find-index@1.1.1: {}
 
+  find-parent-dir@0.3.1: {}
+
   find-up-simple@1.0.0: {}
 
   find-up@4.1.0:
@@ -8132,6 +8143,10 @@ snapshots:
   require-directory@2.1.1: {}
 
   requires-port@1.0.0: {}
+
+  resolve-bin@1.0.1:
+    dependencies:
+      find-parent-dir: 0.3.1
 
   resolve-dir@1.0.1:
     dependencies:
