@@ -1,12 +1,11 @@
-import { sync as resolveBinSync } from 'resolve-bin';
-import { execa } from 'execa';
-
 import assert from 'node:assert';
 import { join } from 'node:path';
 
 import { beforeAll, afterAll } from 'vitest';
-import tmp from 'tmp-promise';
+import { sync as resolveBinSync } from 'resolve-bin';
 import { execa } from 'execa';
+import tmp from 'tmp-promise';
+
 import copyWithTemplate from '../lib/copy-with-template';
 
 function findEmber() {

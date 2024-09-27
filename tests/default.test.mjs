@@ -1,6 +1,5 @@
 import { describe, it, expect } from 'vitest';
 import { join } from 'path';
-import { execa } from 'execa';
 import { existsSync, writeFileSync } from 'fs';
 import stripAnsi from 'strip-ansi';
 import { newProjectWithFixtures } from './helpers.mjs';
