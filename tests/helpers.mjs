@@ -1,4 +1,5 @@
 import { sync as resolveBinSync } from 'resolve-bin';
+import { execa } from 'execa';
 
 import assert from 'node:assert';
 import { join } from 'node:path';
@@ -67,5 +68,11 @@ export function newProjectWithFixtures({
     tmpDir: () => tmpDir.path,
     appName: () => name,
     dir: () => join(tmpDir.path, name),
+    $: (...args) => execa({ cwd: join(tmpDir.path, name) })(...args),
+    execa: (program, args, options = {}) =>
+      execa(program, args, {
+        cwd: join(tmpDir.path, name),
+        ...options,
+      }),
   };
 }

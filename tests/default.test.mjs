@@ -22,17 +22,13 @@ describe('basic functionality', function () {
   });
 
   it('successfully lints', async function () {
-    let result = await execa('pnpm', ['lint'], {
-      cwd: project.dir(),
-    });
+    let result = await project.execa('pnpm', ['lint']);
 
     console.log(result.stdout);
   });
 
   it('successfully builds', async function () {
-    let result = await execa('pnpm', ['build'], {
-      cwd: project.dir(),
-    });
+    let result = await project.execa('pnpm', ['build']);
 
     console.log(result.stdout);
   });
@@ -41,9 +37,7 @@ describe('basic functionality', function () {
     let result;
 
     try {
-      result = await execa('pnpm', ['test:ember'], {
-        cwd: project.dir(),
-      });
+      result = await project.execa('pnpm', ['test:ember']);
     } catch (err) {
       console.log(err.stdout, err.stderr);
       throw err;
@@ -60,17 +54,13 @@ describe('basic functionality', function () {
   });
 
   it('successfully runs tests in dev mode', async function () {
-    await execa({
-      cwd: project.dir(),
-    })`pnpm install --save-dev testem http-proxy`;
+    await project.$`pnpm install --save-dev testem http-proxy`;
     let appURL;
 
     let server;
 
     try {
-      server = execa('pnpm', ['start'], {
-        cwd: project.dir(),
-      });
+      server = project.execa('pnpm', ['start']);
 
       await new Promise((resolve) => {
         server.stdout.on('data', (line) => {
@@ -114,13 +104,12 @@ describe('basic functionality', function () {
 `,
       );
 
-      let testResult = await execa(
-        'pnpm',
-        ['testem', '--file', 'testem-dev.js', 'ci'],
-        {
-          cwd: project.dir(),
-        },
-      );
+      let testResult = await project.execa('pnpm', [
+        'testem',
+        '--file',
+        'testem-dev.js',
+        'ci',
+      ]);
       expect(testResult.exitCode).to.eq(0, testResult.output);
     } finally {
       server?.kill('SIGINT');
@@ -128,8 +117,6 @@ describe('basic functionality', function () {
   });
 
   it('successfully optimizes deps', function () {
-    return execa('pnpm', ['vite', 'optimize', '--force'], {
-      cwd: project.dir(),
-    });
+    return project.execa('pnpm', ['vite', 'optimize', '--force']);
   });
 });
