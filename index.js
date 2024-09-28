@@ -133,6 +133,7 @@ module.exports = {
       version: 2,
     };
 
+    json.type = 'module';
     json.exports = {
       './tests/*': './tests/*',
       './*': './app/*',
