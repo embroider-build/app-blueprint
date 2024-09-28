@@ -80,12 +80,12 @@ describe('basic functionality', function () {
     let result;
 
     try {
-      result = await execa('pnpm', ['test:ember'], {
+      result = await execa('pnpm', ['test:ember', '--test-port', '0'], {
         cwd: join(tmpDir.path, appName),
       });
     } catch (err) {
       console.log(err.stdout, err.stderr);
-      throw err;
+      throw 'Failed to successfully run test:ember';
     }
 
     // make sure that each of the tests that we expect actually show up
@@ -125,7 +125,7 @@ describe('basic functionality', function () {
       });
 
       writeFileSync(
-        join(tmpDir.path, appName, 'testem-dev.js'),
+        join(tmpDir.path, appName, 'testem-dev.cjs'),
         `module.exports = {
   test_page: 'tests/index.html?hidepassed',
   disable_watching: true,
@@ -147,7 +147,7 @@ describe('basic functionality', function () {
     },
   },
   middleware: [
-    require(__dirname + '/testem-proxy.js')('${appURL}')
+    require(__dirname + '/testem-proxy.cjs')('${appURL}')
   ],
 };
 `,
@@ -155,7 +155,7 @@ describe('basic functionality', function () {
 
       let testResult = await execa(
         'pnpm',
-        ['testem', '--file', 'testem-dev.js', 'ci'],
+        ['testem', '--file', 'testem-dev.cjs', 'ci'],
         {
           cwd: join(tmpDir.path, appName),
         },

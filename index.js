@@ -3,7 +3,7 @@ const fs = require('fs');
 const { join } = require('path');
 const emberCliUpdate = require('./lib/ember-cli-update');
 const copyWithTemplate = require('./lib/copy-with-template');
-const { rm, readFile } = require('fs/promises');
+const { cp, rm, readFile } = require('fs/promises');
 
 const appBlueprint = Blueprint.lookup('app');
 
@@ -53,6 +53,8 @@ module.exports = {
       'save-dev': true,
       verbose: false,
       packages: [
+        // Too many warnings
+        'ember-data',
         // Not needed anymore
         'ember-fetch',
         'broccoli-asset-rev',
@@ -104,9 +106,26 @@ module.exports = {
       '.eslintignore',
       // replaced with .prettierrc.cjs
       '.prettierrc.js',
+      // CJS (needs renamed)
+      'testem.js',
+      'ember-cli-build.js',
     ];
 
     for (let file of filesToDelete) {
+      await rm(join(options.target, file));
+    }
+
+    const filesToSetAsCJS = [
+      'config/environment.js',
+      'config/targets.js',
+      '.stylelintrc.js',
+    ];
+
+    for (let file of filesToSetAsCJS) {
+      await cp(
+        join(options.target, file),
+        join(options.target, file.replace(/\.js$/, '.cjs')),
+      );
       await rm(join(options.target, file));
     }
 
@@ -118,6 +137,12 @@ module.exports = {
       options,
     );
 
+    copyWithTemplate(
+      join(__dirname, 'files-override/shared'),
+      options.target,
+      options,
+    );
+
     let packageJson = join(options.target, 'package.json');
     let json = JSON.parse(fs.readFileSync(packageJson));
 
@@ -125,7 +150,8 @@ module.exports = {
       ...json.scripts,
       build: 'vite build',
       start: 'vite',
-      'test:ember': 'vite build --mode test && ember test --path dist',
+      'test:ember':
+        'vite build --mode test && ember test --path dist --config-file ./testem.cjs',
     };
 
     json['ember-addon'] = {
@@ -133,6 +159,7 @@ module.exports = {
       version: 2,
     };
 
+    json.type = 'module';
     json.exports = {
       './tests/*': './tests/*',
       './*': './app/*',

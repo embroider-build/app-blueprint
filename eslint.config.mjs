@@ -10,6 +10,7 @@ export default [
   {
     files: [
       'files/*/app/**/*.js',
+      'files-override/*/*.js',
       'files-override/*/app/**/*.js',
       'files-override/*/tests/**/*.js',
     ],
