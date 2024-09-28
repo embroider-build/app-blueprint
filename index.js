@@ -53,6 +53,8 @@ module.exports = {
       'save-dev': true,
       verbose: false,
       packages: [
+        // Too many warnings
+        'ember-data',
         // Not needed anymore
         'ember-fetch',
         'broccoli-asset-rev',

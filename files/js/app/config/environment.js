@@ -2,9 +2,17 @@
 //
 // export default loadConfigFromMeta('<%= name %>');
 
+import { isTesting, isDevelopingApp } from '@embroider/macros';
+
+const isTest = () => isTesting() || location.href.includes('/test');
+
 export default {
   modulePrefix: '<%= name %>',
-  environment: 'development',
+  environment: isTest()
+    ? 'test'
+    : isDevelopingApp()
+      ? 'development'
+      : 'production', // maybe,
   rootURL: '/',
   locationType: 'history',
   EmberENV: {
@@ -15,8 +23,20 @@ export default {
     },
   },
 
+  ...(isTest()
+    ? {
+        locationType: 'none',
+      }
+    : {}),
+
   APP: {
-    // Here you can pass flags/options to your application instance
-    // when it is created
+    ...(isTest()
+      ? {
+          LOG_ACTIVE_GENERATION: false,
+          LOG_VIEW_LOOKUPS: false,
+          rootElement: '#ember-testing',
+          autoboot: false,
+        }
+      : {}),
   },
 };
