@@ -147,7 +147,7 @@ describe('basic functionality', function () {
     },
   },
   middleware: [
-    require(__dirname + '/testem-proxy.js')('${appURL}')
+    require(__dirname + '/testem-proxy.cjs')('${appURL}')
   ],
 };
 `,
@@ -155,7 +155,7 @@ describe('basic functionality', function () {
 
       let testResult = await execa(
         'pnpm',
-        ['testem', '--file', 'testem-dev.js', 'ci'],
+        ['testem', '--file', 'testem-dev.cjs', 'ci'],
         {
           cwd: join(tmpDir.path, appName),
         },
