@@ -150,7 +150,8 @@ module.exports = {
       ...json.scripts,
       build: 'vite build',
       start: 'vite',
-      'test:ember': 'vite build --mode test && ember test --path dist',
+      'test:ember':
+        'vite build --mode test && ember test --path dist --config-file ./testem.cjs',
     };
 
     json['ember-addon'] = {
