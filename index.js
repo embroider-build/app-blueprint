@@ -104,6 +104,10 @@ module.exports = {
       '.eslintignore',
       // replaced with .prettierrc.cjs
       '.prettierrc.js',
+      // CJS (needs renamed)
+      'testem.js',
+      'ember-cli-build.js',
+      '.stylelintrc.js',
     ];
 
     for (let file of filesToDelete) {
@@ -114,6 +118,12 @@ module.exports = {
     // so I'm just copying a few over at this stage
     copyWithTemplate(
       join(__dirname, 'files-override/js'),
+      options.target,
+      options,
+    );
+
+    copyWithTemplate(
+      join(__dirname, 'files-override/shared'),
       options.target,
       options,
     );

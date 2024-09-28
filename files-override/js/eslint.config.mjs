@@ -70,16 +70,7 @@ export default [
    * CJS node files
    */
   {
-    files: [
-      '**/*.cjs',
-      'config/**/*.js',
-      'testem.js',
-      'testem*.js',
-      '.prettierrc.js',
-      '.stylelintrc.js',
-      '.template-lintrc.js',
-      'ember-cli-build.js',
-    ],
+    files: ['**/*.cjs', 'config/**/*.js', 'testem.js', 'testem*.js'],
     plugins: {
       n,
     },
@@ -96,7 +87,7 @@ export default [
    * ESM node files
    */
   {
-    files: ['*.mjs'],
+    files: ['*.mjs', '*.js'],
     plugins: {
       n,
     },
