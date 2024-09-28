@@ -3,7 +3,7 @@ const fs = require('fs');
 const { join } = require('path');
 const emberCliUpdate = require('./lib/ember-cli-update');
 const copyWithTemplate = require('./lib/copy-with-template');
-const { rm, readFile } = require('fs/promises');
+const { cp, rm, readFile } = require('fs/promises');
 
 const appBlueprint = Blueprint.lookup('app');
 
@@ -107,10 +107,23 @@ module.exports = {
       // CJS (needs renamed)
       'testem.js',
       'ember-cli-build.js',
-      '.stylelintrc.js',
     ];
 
     for (let file of filesToDelete) {
+      await rm(join(options.target, file));
+    }
+
+    const filesToSetAsCJS = [
+      'config/environment.js',
+      'config/targets.js',
+      '.stylelintrc.js',
+    ];
+
+    for (let file of filesToSetAsCJS) {
+      await cp(
+        join(options.target, file),
+        join(options.target, file.replace(/\.js$/, '.cjs')),
+      );
       await rm(join(options.target, file));
     }
 
