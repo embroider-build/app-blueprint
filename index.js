@@ -149,15 +149,17 @@ module.exports = {
 
     await this.updateDeps(options);
 
-    const lintFix = require('ember-cli/lib/utilities/lint-fix');
+    if (!options.skipLint) {
+      const lintFix = require('ember-cli/lib/utilities/lint-fix');
 
-    await lintFix.run({
-      // Mock Project
-      pkg: {
-        scripts: { 'lint:fix': true },
-      },
-      ui: this.ui,
-      root: options.target,
-    });
+      await lintFix.run({
+        // Mock Project
+        pkg: {
+          scripts: { 'lint:fix': true },
+        },
+        ui: this.ui,
+        root: options.target,
+      });
+    }
   },
 };
