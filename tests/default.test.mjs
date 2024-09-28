@@ -80,7 +80,7 @@ describe('basic functionality', function () {
     let result;
 
     try {
-      result = await execa('pnpm', ['test:ember'], {
+      result = await execa('pnpm', ['test:ember', '--test-port', '0'], {
         cwd: join(tmpDir.path, appName),
       });
     } catch (err) {
