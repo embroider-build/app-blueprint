@@ -85,7 +85,7 @@ describe('basic functionality', function () {
       });
     } catch (err) {
       console.log(err.stdout, err.stderr);
-      throw err;
+      throw 'Failed to successfully run test:ember';
     }
 
     // make sure that each of the tests that we expect actually show up
