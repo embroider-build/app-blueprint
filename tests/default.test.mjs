@@ -125,7 +125,7 @@ describe('basic functionality', function () {
       });
 
       writeFileSync(
-        join(tmpDir.path, appName, 'testem-dev.js'),
+        join(tmpDir.path, appName, 'testem-dev.cjs'),
         `module.exports = {
   test_page: 'tests/index.html?hidepassed',
   disable_watching: true,
