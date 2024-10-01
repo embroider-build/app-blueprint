@@ -14,7 +14,8 @@
   "main": "index.js",
   "scripts": {
     "lint": "eslint .",
-    "test": "vitest"
+    "test": "vitest",
+    "output:fixture": "node ./lib/bin/output-fixture.mjs"
   },
   "dependencies": {
     "ember-cli": "^5.11.0",
