@@ -1,8 +1,7 @@
 {
   "extends": "@tsconfig/ember/tsconfig.json",
   "include": [
-    "app/**/*",
-    "tests/**/*",
+    "app", "tests", "types"
   ],
   "glint": {
     "environment": [

@@ -3,9 +3,18 @@ const fs = require('fs');
 const { join } = require('path');
 const emberCliUpdate = require('./lib/ember-cli-update');
 const copyWithTemplate = require('./lib/copy-with-template');
-const { rm, readFile } = require('fs/promises');
+const { rm, rmdir, readFile, lstat } = require('fs/promises');
 
 const appBlueprint = Blueprint.lookup('app');
+
+async function isDirectory(path) {
+  try {
+    let stat = await lstat(path);
+    return stat.isDirectory();
+  } catch (e) {
+    return false;
+  }
+}
 
 module.exports = {
   locals(options) {
@@ -171,22 +180,39 @@ module.exports = {
       '.eslintignore',
       // replaced with .prettierrc.cjs
       '.prettierrc.js',
-      // We don't set up a template-registry, because we can be entirely gjs/gts
-      // TODO: when using the --compatibility flag (to be implemented), don't remove
-      // this folder
-      'types',
       // ember-data / warp-drive doesn't want folks using models
-      'app/models',
+      'app/models/.gitkeep',
+      // If folks are using models, they have this file.
+      // New projects should not be using it though
+      // 'types/ember-data/types/registries/model.d.ts',
+      'types/global.d.ts',
+
       // We don't need these with gjs/gts
+      'app/helpers/.gitkeep',
+
+      // Delete if empty, kept otherwise
+      'app/models',
       'app/helpers',
     ];
 
+    // TODO: we should probably keep this because enabling TS for JS dev
+    //       is actually very nice.
+    //       Only difference would be that we don't have a lint:types
+    //       or in-editor type-checking
     if (!options.typescript) {
       filesToDelete.push('tsconfig.json');
     }
 
     for (let file of filesToDelete) {
-      await rm(join(options.target, file), { recursive: true, force: true });
+      let targetFile = join(options.target, file);
+
+      let isDir = await isDirectory(targetFile);
+
+      if (isDir) {
+        await rmdir(targetFile);
+      } else {
+        await rm(targetFile);
+      }
     }
 
     // there doesn't seem to be a way to tell ember-cli to not prompt to override files that were added in the beforeInstall
