@@ -11,7 +11,7 @@ async function isDirectory(path) {
   try {
     let stat = await lstat(path);
     return stat.isDirectory();
-  } catch (e) {
+  } catch {
     return false;
   }
 }
