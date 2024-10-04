@@ -15,6 +15,7 @@
   "scripts": {
     "lint": "eslint .",
     "test": "vitest",
+    "output": "node ./lib/bin/new-app.mjs",
     "output:fixture": "node ./lib/bin/output-fixture.mjs"
   },
   "dependencies": {
