@@ -113,6 +113,12 @@ module.exports = {
     // there doesn't seem to be a way to tell ember-cli to not prompt to override files that were added in the beforeInstall
     // so I'm just copying a few over at this stage
     copyWithTemplate(
+      join(__dirname, 'files-override/shared'),
+      options.target,
+      options,
+    );
+
+    copyWithTemplate(
       join(__dirname, 'files-override/js'),
       options.target,
       options,
