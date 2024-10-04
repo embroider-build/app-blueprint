@@ -1,5 +1,26 @@
 # Changelog
 
+## Release (2024-10-04)
+
+@embroider/app-blueprint 0.12.0 (minor)
+
+#### :rocket: Enhancement
+* `@embroider/app-blueprint`
+  * [#96](https://github.com/embroider-build/app-blueprint/pull/96) fix all @embroider/virtual renames ([@mansona](https://github.com/mansona))
+  * [#91](https://github.com/embroider-build/app-blueprint/pull/91) Allow skipping lint:fix when installing ([@kiwiupover](https://github.com/kiwiupover))
+
+#### :house: Internal
+* `@embroider/app-blueprint`
+  * [#93](https://github.com/embroider-build/app-blueprint/pull/93) Extract an output:fixture command for manual testing ([@NullVoxPopuli](https://github.com/NullVoxPopuli))
+  * [#94](https://github.com/embroider-build/app-blueprint/pull/94) Parameterize the default tests for quickly adding scenarios to test ([@NullVoxPopuli](https://github.com/NullVoxPopuli))
+  * [#87](https://github.com/embroider-build/app-blueprint/pull/87) Extract project creation util so that multiple test files can share the "ember new + fixture" stuff ([@NullVoxPopuli](https://github.com/NullVoxPopuli))
+  * [#88](https://github.com/embroider-build/app-blueprint/pull/88) Use local ember-cli instead of global ([@NullVoxPopuli](https://github.com/NullVoxPopuli))
+
+#### Committers: 3
+- Chris Manson ([@mansona](https://github.com/mansona))
+- Dave Laird ([@kiwiupover](https://github.com/kiwiupover))
+- [@NullVoxPopuli](https://github.com/NullVoxPopuli)
+
 ## Release (2024-09-26)
 
 @embroider/app-blueprint 0.11.0 (minor)
