@@ -206,6 +206,9 @@ module.exports = {
     for (let file of filesToDelete) {
       let targetFile = join(options.target, file);
 
+      // Don't try to delete TS files (for example) in a JS project
+      if (!fs.existsSync(targetFile)) continue;
+
       let isDir = await isDirectory(targetFile);
 
       if (isDir) {
