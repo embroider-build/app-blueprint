@@ -2,12 +2,19 @@
 
 module.exports = {
   plugins: ['prettier-plugin-ember-template-tag'],
+  singleQuote: true,
   overrides: [
     {
       files: ['*.js', '*.ts', '*.cjs', '.mjs', '.cts', '.mts', '.cts'],
       options: {
         singleQuote: true,
         trailingComma: 'es5',
+      },
+    },
+    {
+      files: ['*.html'],
+      options: {
+        singleQuote: false,
       },
     },
     {
