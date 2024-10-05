@@ -119,6 +119,8 @@ module.exports = {
         '@rollup/plugin-babel',
         'decorator-transforms',
 
+        // Dependencies out of date from upstream
+        // (or waiting for the release train to catch up)
         'eslint@latest',
         'eslint-plugin-ember@latest',
         'eslint-plugin-n@latest',
@@ -140,14 +142,13 @@ module.exports = {
         'babel-plugin-ember-template-compilation',
         'prettier-plugin-ember-template-tag',
 
-        // Dependencies out of date from upstream
-        // (or waiting for the release train to catch up)
-        'ember-route-template',
-
         // TypeScript
         // Note that Vite supports TypeScript with 0 configuration on the user's part
         ...(options.typescript
           ? [
+              // See RFC: https://github.com/emberjs/rfcs/pull/1046
+              'ember-route-template',
+
               '@babel/plugin-transform-typescript',
               // TODO: see if there is a better way we can
               //       sync these libraries' versions
