@@ -172,8 +172,6 @@ module.exports = {
     const filesToDelete = [
       // now in the project root
       'app/index.html',
-      // replaced with application.gjs/gts
-      'app/templates/application.hbs',
       // replaced with .eslintrc.cjs
       '.eslintrc.js',
       // This file is not supported in ESLint 9
@@ -182,10 +180,6 @@ module.exports = {
       '.prettierrc.js',
       // ember-data / warp-drive doesn't want folks using models
       'app/models/.gitkeep',
-      // If folks are using models, they have this file.
-      // New projects should not be using it though
-      // 'types/ember-data/types/registries/model.d.ts',
-      'types/global.d.ts',
 
       // We don't need these with gjs/gts
       'app/helpers/.gitkeep',
@@ -193,6 +187,17 @@ module.exports = {
       // Delete if empty, kept otherwise
       'app/models',
       'app/helpers',
+
+      ...(options.typescript
+        ? [
+            // Until we add application.gjs
+            'app/templates/application.hbs',
+            // If folks are using models, they have this file.
+            // New projects should not be using it though
+            // 'types/ember-data/types/registries/model.d.ts',
+            'types/global.d.ts',
+          ]
+        : []),
     ];
 
     // TODO: we should probably keep this because enabling TS for JS dev
