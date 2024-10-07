@@ -1,5 +1,21 @@
 # Changelog
 
+## Release (2024-10-07)
+
+@embroider/app-blueprint 0.13.0 (minor)
+
+#### :rocket: Enhancement
+* `@embroider/app-blueprint`
+  * [#97](https://github.com/embroider-build/app-blueprint/pull/97) Use @embroider/virtual instead of @embroider/core for test-support ([@NullVoxPopuli](https://github.com/NullVoxPopuli))
+
+#### :house: Internal
+* `@embroider/app-blueprint`
+  * [#101](https://github.com/embroider-build/app-blueprint/pull/101) Create new 'output' script for a short way to run the generator ([@NullVoxPopuli](https://github.com/NullVoxPopuli))
+  * [#99](https://github.com/embroider-build/app-blueprint/pull/99) Move more files to the files-override/shared folder ([@NullVoxPopuli](https://github.com/NullVoxPopuli))
+
+#### Committers: 1
+- [@NullVoxPopuli](https://github.com/NullVoxPopuli)
+
 ## Release (2024-10-04)
 
 @embroider/app-blueprint 0.12.0 (minor)
