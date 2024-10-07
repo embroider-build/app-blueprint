@@ -2,8 +2,8 @@
   "solution": {
     "@embroider/app-blueprint": {
       "impact": "minor",
-      "oldVersion": "0.11.0",
-      "newVersion": "0.12.0",
+      "oldVersion": "0.12.0",
+      "newVersion": "0.13.0",
       "constraints": [
         {
           "impact": "minor",
@@ -17,5 +17,5 @@
       "pkgJSONPath": "./package.json"
     }
   },
-  "description": "## Release (2024-10-04)\n\n@embroider/app-blueprint 0.12.0 (minor)\n\n#### :rocket: Enhancement\n* `@embroider/app-blueprint`\n  * [#96](https://github.com/embroider-build/app-blueprint/pull/96) fix all @embroider/virtual renames ([@mansona](https://github.com/mansona))\n  * [#91](https://github.com/embroider-build/app-blueprint/pull/91) Allow skipping lint:fix when installing ([@kiwiupover](https://github.com/kiwiupover))\n\n#### :house: Internal\n* `@embroider/app-blueprint`\n  * [#93](https://github.com/embroider-build/app-blueprint/pull/93) Extract an output:fixture command for manual testing ([@NullVoxPopuli](https://github.com/NullVoxPopuli))\n  * [#94](https://github.com/embroider-build/app-blueprint/pull/94) Parameterize the default tests for quickly adding scenarios to test ([@NullVoxPopuli](https://github.com/NullVoxPopuli))\n  * [#87](https://github.com/embroider-build/app-blueprint/pull/87) Extract project creation util so that multiple test files can share the \"ember new + fixture\" stuff ([@NullVoxPopuli](https://github.com/NullVoxPopuli))\n  * [#88](https://github.com/embroider-build/app-blueprint/pull/88) Use local ember-cli instead of global ([@NullVoxPopuli](https://github.com/NullVoxPopuli))\n\n#### Committers: 3\n- Chris Manson ([@mansona](https://github.com/mansona))\n- Dave Laird ([@kiwiupover](https://github.com/kiwiupover))\n- [@NullVoxPopuli](https://github.com/NullVoxPopuli)\n"
+  "description": "## Release (2024-10-07)\n\n@embroider/app-blueprint 0.13.0 (minor)\n\n#### :rocket: Enhancement\n* `@embroider/app-blueprint`\n  * [#97](https://github.com/embroider-build/app-blueprint/pull/97) Use @embroider/virtual instead of @embroider/core for test-support ([@NullVoxPopuli](https://github.com/NullVoxPopuli))\n\n#### :house: Internal\n* `@embroider/app-blueprint`\n  * [#101](https://github.com/embroider-build/app-blueprint/pull/101) Create new 'output' script for a short way to run the generator ([@NullVoxPopuli](https://github.com/NullVoxPopuli))\n  * [#99](https://github.com/embroider-build/app-blueprint/pull/99) Move more files to the files-override/shared folder ([@NullVoxPopuli](https://github.com/NullVoxPopuli))\n\n#### Committers: 1\n- [@NullVoxPopuli](https://github.com/NullVoxPopuli)\n"
 }
