@@ -7,7 +7,6 @@ module.exports = {
     {
       files: ['*.js', '*.ts', '*.cjs', '.mjs', '.cts', '.mts', '.cts'],
       options: {
-        singleQuote: true,
         trailingComma: 'es5',
       },
     },
@@ -32,7 +31,6 @@ module.exports = {
     {
       files: ['*.gjs', '*.gts'],
       options: {
-        singleQuote: true,
         templateSingleQuote: false,
         trailingComma: 'es5',
       },
