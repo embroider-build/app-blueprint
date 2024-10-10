@@ -10,6 +10,7 @@ export default [
   {
     files: [
       'files/*/app/**/*.js',
+      'files-override/**/*.mjs',
       'files-override/*/app/**/*.js',
       'files-override/*/tests/**/*.js',
     ],
@@ -24,6 +25,6 @@ export default [
   pluginJs.configs.recommended,
   eslintPluginPrettierRecommended,
   {
-    ignores: ['tests/fixture/*'],
+    ignores: ['tests/fixture/*', 'tests/fixture-ts/*'],
   },
 ];
