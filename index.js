@@ -132,9 +132,6 @@ module.exports = {
         'ember-load-initializers@latest',
         'qunit@latest',
         'qunit-dom@latest',
-        'stylelint@latest',
-        'stylelint-prettier@latest',
-        'stylelint-config-standard@latest',
         'concurrently@latest',
 
         // Needed for eslint
