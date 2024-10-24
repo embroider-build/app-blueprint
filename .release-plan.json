@@ -1,21 +1,17 @@
 {
   "solution": {
     "@embroider/app-blueprint": {
-      "impact": "minor",
-      "oldVersion": "0.12.0",
-      "newVersion": "0.13.0",
+      "impact": "patch",
+      "oldVersion": "0.13.0",
+      "newVersion": "0.13.1",
       "constraints": [
         {
-          "impact": "minor",
-          "reason": "Appears in changelog section :rocket: Enhancement"
-        },
-        {
           "impact": "patch",
-          "reason": "Appears in changelog section :house: Internal"
+          "reason": "Appears in changelog section :bug: Bug Fix"
         }
       ],
       "pkgJSONPath": "./package.json"
     }
   },
-  "description": "## Release (2024-10-07)\n\n@embroider/app-blueprint 0.13.0 (minor)\n\n#### :rocket: Enhancement\n* `@embroider/app-blueprint`\n  * [#97](https://github.com/embroider-build/app-blueprint/pull/97) Use @embroider/virtual instead of @embroider/core for test-support ([@NullVoxPopuli](https://github.com/NullVoxPopuli))\n\n#### :house: Internal\n* `@embroider/app-blueprint`\n  * [#101](https://github.com/embroider-build/app-blueprint/pull/101) Create new 'output' script for a short way to run the generator ([@NullVoxPopuli](https://github.com/NullVoxPopuli))\n  * [#99](https://github.com/embroider-build/app-blueprint/pull/99) Move more files to the files-override/shared folder ([@NullVoxPopuli](https://github.com/NullVoxPopuli))\n\n#### Committers: 1\n- [@NullVoxPopuli](https://github.com/NullVoxPopuli)\n"
+  "description": "## Release (2024-10-24)\n\n@embroider/app-blueprint 0.13.1 (patch)\n\n#### :bug: Bug Fix\n* `@embroider/app-blueprint`\n  * [#102](https://github.com/embroider-build/app-blueprint/pull/102) Add missing babel packages ([@balinterdi](https://github.com/balinterdi))\n\n#### Committers: 1\n- Balint Erdi ([@balinterdi](https://github.com/balinterdi))\n"
 }

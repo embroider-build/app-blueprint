@@ -1,5 +1,16 @@
 # Changelog
 
+## Release (2024-10-24)
+
+@embroider/app-blueprint 0.13.1 (patch)
+
+#### :bug: Bug Fix
+* `@embroider/app-blueprint`
+  * [#102](https://github.com/embroider-build/app-blueprint/pull/102) Add missing babel packages ([@balinterdi](https://github.com/balinterdi))
+
+#### Committers: 1
+- Balint Erdi ([@balinterdi](https://github.com/balinterdi))
+
 ## Release (2024-10-07)
 
 @embroider/app-blueprint 0.13.0 (minor)
