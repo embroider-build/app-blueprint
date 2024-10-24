@@ -84,6 +84,8 @@ module.exports = {
         'eslint-plugin-ember@latest',
         'eslint-plugin-n@latest',
         '@babel/eslint-parser@latest',
+        '@babel/plugin-transform-runtime@latest',
+        '@babel/runtime@latest',
         'ember-resolver@latest',
         'ember-load-initializers@latest',
         // Needed for eslint
