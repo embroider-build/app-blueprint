@@ -59,6 +59,7 @@ module.exports = {
         'ember-cli-app-version',
         'ember-cli-clean-css',
         'ember-cli-dependency-checker',
+        'ember-cli-inject-live-reload',
         'ember-cli-sri',
         'ember-cli-terser',
         // Linting
