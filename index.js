@@ -252,10 +252,6 @@ module.exports = {
       'test:ember': 'vite build --mode test && ember test --path dist',
     };
 
-    json.scripts['test'] += ' --prefixColors auto';
-    json.scripts['lint'] += ' --prefixColors auto';
-    json.scripts['lint:fix'] += ' --prefixColors auto';
-
     if (json.scripts['lint:types']) {
       json.scripts['lint:types'] = 'glint';
     }
