@@ -184,15 +184,6 @@ module.exports = {
       '.eslintignore',
       // replaced with .prettierrc.cjs
       '.prettierrc.js',
-      // ember-data / warp-drive doesn't want folks using models
-      'app/models/.gitkeep',
-
-      // We don't need these with gjs/gts
-      'app/helpers/.gitkeep',
-
-      // Delete if empty, kept otherwise
-      'app/models',
-      'app/helpers',
 
       ...(options.typescript
         ? [
