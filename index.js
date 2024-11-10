@@ -122,20 +122,20 @@ module.exports = {
 
         // Dependencies out of date from upstream
         // (or waiting for the release train to catch up)
-        'eslint@latest',
-        'eslint-plugin-ember@latest',
-        'eslint-plugin-n@latest',
-        '@babel/eslint-parser@latest',
-        '@babel/plugin-transform-runtime@latest',
-        '@babel/runtime@latest',
-        'ember-template-lint@latest',
+        'eslint@^9.14.0',
+        'eslint-plugin-ember@^12.3.1',
+        'eslint-plugin-n@^17.13.1',
+        '@babel/eslint-parser@^7.25.9',
+        '@babel/plugin-transform-runtime@^7.25.9',
+        '@babel/runtime@^7.26.0',
+        'ember-template-lint@^6.0.0',
 
-        '@ember/string@latest',
-        'ember-resolver@latest',
-        'ember-load-initializers@latest',
-        'qunit@latest',
-        'qunit-dom@latest',
-        'concurrently@latest',
+        '@ember/string@^4.0.0',
+        'ember-resolver@^13.0.2',
+        'ember-load-initializers@^3.0.1',
+        'qunit@^2.22.0',
+        'qunit-dom@^3.30',
+        'concurrently@^9.1.0',
 
         // Needed for eslint
         'globals',
@@ -159,9 +159,9 @@ module.exports = {
               '@glint/environment-ember-template-imports@unstable',
               '@glint/template@unstable',
               '@types/eslint__js',
-              'typescript-eslint@latest',
-              '@typescript-eslint/eslint-plugin@latest',
-              '@typescript-eslint/parser@latest',
+              'typescript-eslint@^8.13.0',
+              '@typescript-eslint/eslint-plugin@^8.13.0',
+              '@typescript-eslint/parser@^8.13.0',
             ]
           : []),
       ],
