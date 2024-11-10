@@ -139,7 +139,7 @@ module.exports = {
         'ember-resolver@^13.0.2',
         'ember-load-initializers@^3.0.1',
         'qunit@^2.22.0',
-        'qunit-dom@^3.30',
+        'qunit-dom@^3.3.0',
         'concurrently@^9.1.0',
 
         // Needed for eslint
