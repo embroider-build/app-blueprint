@@ -1,5 +1,18 @@
 # Changelog
 
+## Release (2024-11-11)
+
+@embroider/app-blueprint 0.14.0 (minor)
+
+#### :rocket: Enhancement
+* `@embroider/app-blueprint`
+  * [#80](https://github.com/embroider-build/app-blueprint/pull/80) Fix support for `--typescript` ([@NullVoxPopuli](https://github.com/NullVoxPopuli))
+  * [#104](https://github.com/embroider-build/app-blueprint/pull/104) Remove ember-cli-inject-live-reload dependency ([@HeroicEric](https://github.com/HeroicEric))
+
+#### Committers: 2
+- Eric Kelly ([@HeroicEric](https://github.com/HeroicEric))
+- [@NullVoxPopuli](https://github.com/NullVoxPopuli)
+
 ## Release (2024-10-24)
 
 @embroider/app-blueprint 0.13.1 (patch)

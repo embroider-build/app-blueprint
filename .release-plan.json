@@ -1,17 +1,17 @@
 {
   "solution": {
     "@embroider/app-blueprint": {
-      "impact": "patch",
-      "oldVersion": "0.13.0",
-      "newVersion": "0.13.1",
+      "impact": "minor",
+      "oldVersion": "0.13.1",
+      "newVersion": "0.14.0",
       "constraints": [
         {
-          "impact": "patch",
-          "reason": "Appears in changelog section :bug: Bug Fix"
+          "impact": "minor",
+          "reason": "Appears in changelog section :rocket: Enhancement"
         }
       ],
       "pkgJSONPath": "./package.json"
     }
   },
-  "description": "## Release (2024-10-24)\n\n@embroider/app-blueprint 0.13.1 (patch)\n\n#### :bug: Bug Fix\n* `@embroider/app-blueprint`\n  * [#102](https://github.com/embroider-build/app-blueprint/pull/102) Add missing babel packages ([@balinterdi](https://github.com/balinterdi))\n\n#### Committers: 1\n- Balint Erdi ([@balinterdi](https://github.com/balinterdi))\n"
+  "description": "## Release (2024-11-11)\n\n@embroider/app-blueprint 0.14.0 (minor)\n\n#### :rocket: Enhancement\n* `@embroider/app-blueprint`\n  * [#80](https://github.com/embroider-build/app-blueprint/pull/80) Fix support for `--typescript` ([@NullVoxPopuli](https://github.com/NullVoxPopuli))\n  * [#104](https://github.com/embroider-build/app-blueprint/pull/104) Remove ember-cli-inject-live-reload dependency ([@HeroicEric](https://github.com/HeroicEric))\n\n#### Committers: 2\n- Eric Kelly ([@HeroicEric](https://github.com/HeroicEric))\n- [@NullVoxPopuli](https://github.com/NullVoxPopuli)\n"
 }
