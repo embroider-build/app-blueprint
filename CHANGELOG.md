@@ -1,5 +1,20 @@
 # Changelog
 
+## Release (2024-11-18)
+
+@embroider/app-blueprint 0.15.0 (minor)
+
+#### :rocket: Enhancement
+* `@embroider/app-blueprint`
+  * [#107](https://github.com/embroider-build/app-blueprint/pull/107) Update ember cli to 6.0 ([@mansona](https://github.com/mansona))
+
+#### :bug: Bug Fix
+* `@embroider/app-blueprint`
+  * [#110](https://github.com/embroider-build/app-blueprint/pull/110) fix upstream issue with typescript-eslint ([@mansona](https://github.com/mansona))
+
+#### Committers: 1
+- Chris Manson ([@mansona](https://github.com/mansona))
+
 ## Release (2024-11-11)
 
 @embroider/app-blueprint 0.14.0 (minor)
