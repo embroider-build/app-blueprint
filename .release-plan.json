@@ -2,16 +2,20 @@
   "solution": {
     "@embroider/app-blueprint": {
       "impact": "minor",
-      "oldVersion": "0.13.1",
-      "newVersion": "0.14.0",
+      "oldVersion": "0.14.0",
+      "newVersion": "0.15.0",
       "constraints": [
         {
           "impact": "minor",
           "reason": "Appears in changelog section :rocket: Enhancement"
+        },
+        {
+          "impact": "patch",
+          "reason": "Appears in changelog section :bug: Bug Fix"
         }
       ],
       "pkgJSONPath": "./package.json"
     }
   },
-  "description": "## Release (2024-11-11)\n\n@embroider/app-blueprint 0.14.0 (minor)\n\n#### :rocket: Enhancement\n* `@embroider/app-blueprint`\n  * [#80](https://github.com/embroider-build/app-blueprint/pull/80) Fix support for `--typescript` ([@NullVoxPopuli](https://github.com/NullVoxPopuli))\n  * [#104](https://github.com/embroider-build/app-blueprint/pull/104) Remove ember-cli-inject-live-reload dependency ([@HeroicEric](https://github.com/HeroicEric))\n\n#### Committers: 2\n- Eric Kelly ([@HeroicEric](https://github.com/HeroicEric))\n- [@NullVoxPopuli](https://github.com/NullVoxPopuli)\n"
+  "description": "## Release (2024-11-18)\n\n@embroider/app-blueprint 0.15.0 (minor)\n\n#### :rocket: Enhancement\n* `@embroider/app-blueprint`\n  * [#107](https://github.com/embroider-build/app-blueprint/pull/107) Update ember cli to 6.0 ([@mansona](https://github.com/mansona))\n\n#### :bug: Bug Fix\n* `@embroider/app-blueprint`\n  * [#110](https://github.com/embroider-build/app-blueprint/pull/110) fix upstream issue with typescript-eslint ([@mansona](https://github.com/mansona))\n\n#### Committers: 1\n- Chris Manson ([@mansona](https://github.com/mansona))\n"
 }
