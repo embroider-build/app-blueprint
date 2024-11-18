@@ -164,9 +164,9 @@ module.exports = {
               '@glint/environment-ember-template-imports@unstable',
               '@glint/template@unstable',
               '@types/eslint__js',
-              'typescript-eslint@^8.13.0',
-              '@typescript-eslint/eslint-plugin@^8.13.0',
-              '@typescript-eslint/parser@^8.13.0',
+              'typescript-eslint@^8.14.1-alpha.8',
+              '@typescript-eslint/eslint-plugin@^8.14.1-alpha.8',
+              '@typescript-eslint/parser@^8.14.1-alpha.8',
             ]
           : []),
       ],
