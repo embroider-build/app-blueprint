@@ -2,8 +2,8 @@
   "solution": {
     "@embroider/app-blueprint": {
       "impact": "minor",
-      "oldVersion": "0.14.0",
-      "newVersion": "0.15.0",
+      "oldVersion": "0.15.0",
+      "newVersion": "0.16.0",
       "constraints": [
         {
           "impact": "minor",
@@ -11,11 +11,11 @@
         },
         {
           "impact": "patch",
-          "reason": "Appears in changelog section :bug: Bug Fix"
+          "reason": "Appears in changelog section :house: Internal"
         }
       ],
       "pkgJSONPath": "./package.json"
     }
   },
-  "description": "## Release (2024-11-18)\n\n@embroider/app-blueprint 0.15.0 (minor)\n\n#### :rocket: Enhancement\n* `@embroider/app-blueprint`\n  * [#107](https://github.com/embroider-build/app-blueprint/pull/107) Update ember cli to 6.0 ([@mansona](https://github.com/mansona))\n\n#### :bug: Bug Fix\n* `@embroider/app-blueprint`\n  * [#110](https://github.com/embroider-build/app-blueprint/pull/110) fix upstream issue with typescript-eslint ([@mansona](https://github.com/mansona))\n\n#### Committers: 1\n- Chris Manson ([@mansona](https://github.com/mansona))\n"
+  "description": "## Release (2024-11-23)\n\n@embroider/app-blueprint 0.16.0 (minor)\n\n#### :rocket: Enhancement\n* `@embroider/app-blueprint`\n  * [#116](https://github.com/embroider-build/app-blueprint/pull/116) bump @ember/test-helpers and stop ember-qunit from using requirejs ([@mansona](https://github.com/mansona))\n\n#### :house: Internal\n* `@embroider/app-blueprint`\n  * [#74](https://github.com/embroider-build/app-blueprint/pull/74) add a test to verify generators are still working ([@mansona](https://github.com/mansona))\n  * [#112](https://github.com/embroider-build/app-blueprint/pull/112) delete TS file in JS fixture ([@mansona](https://github.com/mansona))\n\n#### Committers: 1\n- Chris Manson ([@mansona](https://github.com/mansona))\n"
 }

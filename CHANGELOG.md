@@ -1,5 +1,21 @@
 # Changelog
 
+## Release (2024-11-23)
+
+@embroider/app-blueprint 0.16.0 (minor)
+
+#### :rocket: Enhancement
+* `@embroider/app-blueprint`
+  * [#116](https://github.com/embroider-build/app-blueprint/pull/116) bump @ember/test-helpers and stop ember-qunit from using requirejs ([@mansona](https://github.com/mansona))
+
+#### :house: Internal
+* `@embroider/app-blueprint`
+  * [#74](https://github.com/embroider-build/app-blueprint/pull/74) add a test to verify generators are still working ([@mansona](https://github.com/mansona))
+  * [#112](https://github.com/embroider-build/app-blueprint/pull/112) delete TS file in JS fixture ([@mansona](https://github.com/mansona))
+
+#### Committers: 1
+- Chris Manson ([@mansona](https://github.com/mansona))
+
 ## Release (2024-11-18)
 
 @embroider/app-blueprint 0.15.0 (minor)
