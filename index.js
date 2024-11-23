@@ -137,6 +137,7 @@ module.exports = {
         'ember-template-lint@^6.0.0',
 
         '@ember/string@^4.0.0',
+        '@ember/test-helpers@^4.0.0',
         'ember-resolver@^13.0.2',
         'ember-load-initializers@^3.0.1',
         'qunit@^2.22.0',
