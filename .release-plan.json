@@ -1,21 +1,17 @@
 {
   "solution": {
     "@embroider/app-blueprint": {
-      "impact": "minor",
-      "oldVersion": "0.15.0",
-      "newVersion": "0.16.0",
+      "impact": "patch",
+      "oldVersion": "0.16.0",
+      "newVersion": "0.16.1",
       "constraints": [
         {
-          "impact": "minor",
-          "reason": "Appears in changelog section :rocket: Enhancement"
-        },
-        {
           "impact": "patch",
-          "reason": "Appears in changelog section :house: Internal"
+          "reason": "Appears in changelog section :bug: Bug Fix"
         }
       ],
       "pkgJSONPath": "./package.json"
     }
   },
-  "description": "## Release (2024-11-23)\n\n@embroider/app-blueprint 0.16.0 (minor)\n\n#### :rocket: Enhancement\n* `@embroider/app-blueprint`\n  * [#116](https://github.com/embroider-build/app-blueprint/pull/116) bump @ember/test-helpers and stop ember-qunit from using requirejs ([@mansona](https://github.com/mansona))\n\n#### :house: Internal\n* `@embroider/app-blueprint`\n  * [#74](https://github.com/embroider-build/app-blueprint/pull/74) add a test to verify generators are still working ([@mansona](https://github.com/mansona))\n  * [#112](https://github.com/embroider-build/app-blueprint/pull/112) delete TS file in JS fixture ([@mansona](https://github.com/mansona))\n\n#### Committers: 1\n- Chris Manson ([@mansona](https://github.com/mansona))\n"
+  "description": "## Release (2024-11-27)\n\n@embroider/app-blueprint 0.16.1 (patch)\n\n#### :bug: Bug Fix\n* `@embroider/app-blueprint`\n  * [#117](https://github.com/embroider-build/app-blueprint/pull/117) Stick to vite v5 for now ([@simonihmig](https://github.com/simonihmig))\n\n#### Committers: 1\n- Simon Ihmig ([@simonihmig](https://github.com/simonihmig))\n"
 }

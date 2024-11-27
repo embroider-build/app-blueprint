@@ -1,5 +1,16 @@
 # Changelog
 
+## Release (2024-11-27)
+
+@embroider/app-blueprint 0.16.1 (patch)
+
+#### :bug: Bug Fix
+* `@embroider/app-blueprint`
+  * [#117](https://github.com/embroider-build/app-blueprint/pull/117) Stick to vite v5 for now ([@simonihmig](https://github.com/simonihmig))
+
+#### Committers: 1
+- Simon Ihmig ([@simonihmig](https://github.com/simonihmig))
+
 ## Release (2024-11-23)
 
 @embroider/app-blueprint 0.16.0 (minor)
