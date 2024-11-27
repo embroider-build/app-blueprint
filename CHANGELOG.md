@@ -2,6 +2,17 @@
 
 ## Release (2024-11-27)
 
+@embroider/app-blueprint 0.17.0 (minor)
+
+#### :rocket: Enhancement
+* `@embroider/app-blueprint`
+  * [#119](https://github.com/embroider-build/app-blueprint/pull/119) Remove webpack from dependencies ([@simonihmig](https://github.com/simonihmig))
+
+#### Committers: 1
+- Simon Ihmig ([@simonihmig](https://github.com/simonihmig))
+
+## Release (2024-11-27)
+
 @embroider/app-blueprint 0.16.1 (patch)
 
 #### :bug: Bug Fix
