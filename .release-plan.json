@@ -1,17 +1,17 @@
 {
   "solution": {
     "@embroider/app-blueprint": {
-      "impact": "patch",
-      "oldVersion": "0.16.0",
-      "newVersion": "0.16.1",
+      "impact": "minor",
+      "oldVersion": "0.16.1",
+      "newVersion": "0.17.0",
       "constraints": [
         {
-          "impact": "patch",
-          "reason": "Appears in changelog section :bug: Bug Fix"
+          "impact": "minor",
+          "reason": "Appears in changelog section :rocket: Enhancement"
         }
       ],
       "pkgJSONPath": "./package.json"
     }
   },
-  "description": "## Release (2024-11-27)\n\n@embroider/app-blueprint 0.16.1 (patch)\n\n#### :bug: Bug Fix\n* `@embroider/app-blueprint`\n  * [#117](https://github.com/embroider-build/app-blueprint/pull/117) Stick to vite v5 for now ([@simonihmig](https://github.com/simonihmig))\n\n#### Committers: 1\n- Simon Ihmig ([@simonihmig](https://github.com/simonihmig))\n"
+  "description": "## Release (2024-11-27)\n\n@embroider/app-blueprint 0.17.0 (minor)\n\n#### :rocket: Enhancement\n* `@embroider/app-blueprint`\n  * [#119](https://github.com/embroider-build/app-blueprint/pull/119) Remove webpack from dependencies ([@simonihmig](https://github.com/simonihmig))\n\n#### Committers: 1\n- Simon Ihmig ([@simonihmig](https://github.com/simonihmig))\n"
 }
