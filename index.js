@@ -72,6 +72,7 @@ module.exports = {
         'ember-cli-inject-live-reload',
         'ember-cli-sri',
         'ember-cli-terser',
+        'webpack',
         // Linting
         // No longer needed because we explicitly define a babel config
         '@babel/plugin-proposal-decorators',
