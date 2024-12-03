@@ -2,8 +2,10 @@ const {
   babelCompatSupport,
   templateCompatSupport,
 } = require('@embroider/compat/babel');
+const targets = require('./config/targets');
 
 module.exports = {
+  presets: [['@babel/preset-env', { targets, modules: false }]],
   plugins: [
     [
       'babel-plugin-ember-template-compilation',
