@@ -2,8 +2,8 @@
   "solution": {
     "@embroider/app-blueprint": {
       "impact": "minor",
-      "oldVersion": "0.16.1",
-      "newVersion": "0.17.0",
+      "oldVersion": "0.17.0",
+      "newVersion": "0.18.0",
       "constraints": [
         {
           "impact": "minor",
@@ -13,5 +13,5 @@
       "pkgJSONPath": "./package.json"
     }
   },
-  "description": "## Release (2024-11-27)\n\n@embroider/app-blueprint 0.17.0 (minor)\n\n#### :rocket: Enhancement\n* `@embroider/app-blueprint`\n  * [#119](https://github.com/embroider-build/app-blueprint/pull/119) Remove webpack from dependencies ([@simonihmig](https://github.com/simonihmig))\n\n#### Committers: 1\n- Simon Ihmig ([@simonihmig](https://github.com/simonihmig))\n"
+  "description": "## Release (2024-12-06)\n\n@embroider/app-blueprint 0.18.0 (minor)\n\n#### :rocket: Enhancement\n* `@embroider/app-blueprint`\n  * [#124](https://github.com/embroider-build/app-blueprint/pull/124) move to the new cleaner vite config ([@mansona](https://github.com/mansona))\n\n#### Committers: 1\n- Chris Manson ([@mansona](https://github.com/mansona))\n"
 }
