@@ -21,7 +21,16 @@ export default [
   js.configs.recommended,
   prettier,
   {
+    /**
+     * Ignores must be in their own object
+     * https://eslint.org/docs/latest/use/configure/ignore
+     */
     ignores: ['dist/', 'node_modules/', 'coverage/', '!**/.*'],
+  },
+  {
+    /**
+     * https://eslint.org/docs/latest/use/configure/configuration-files#configuring-linter-options
+     */
     linterOptions: {
       reportUnusedDisableDirectives: 'error',
     },

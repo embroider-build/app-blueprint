@@ -32,6 +32,21 @@ export default ts.config(
   js.configs.recommended,
   prettier,
   {
+    /**
+     * Ignores must be in their own object
+     * https://eslint.org/docs/latest/use/configure/ignore
+     */
+    ignores: ['dist/', 'node_modules/', 'coverage/', '!**/.*'],
+  },
+  {
+    /**
+     * https://eslint.org/docs/latest/use/configure/configuration-files#configuring-linter-options
+     */
+    linterOptions: {
+      reportUnusedDisableDirectives: 'error',
+    },
+  },
+  {
     files: ['**/*.js'],
     languageOptions: {
       parser: babelParser,
@@ -133,14 +148,5 @@ export default ts.config(
         ...globals.node,
       },
     },
-  },
-  /**
-   * Settings
-   */
-  {
-    ignores: ['dist/', 'node_modules/', 'coverage/', '!**/.*'],
-    linterOptions: {
-      reportUnusedDisableDirectives: 'error',
-    },
-  },
+  }
 );
