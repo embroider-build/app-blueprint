@@ -1,5 +1,20 @@
 # Changelog
 
+## Release (2025-01-12)
+
+@embroider/app-blueprint 0.19.0 (minor)
+
+#### :rocket: Enhancement
+* `@embroider/app-blueprint`
+  * [#126](https://github.com/embroider-build/app-blueprint/pull/126) Add vite/client types ([@evoactivity](https://github.com/evoactivity))
+
+#### :bug: Bug Fix
+* `@embroider/app-blueprint`
+  * [#128](https://github.com/embroider-build/app-blueprint/pull/128) fix typescript: eslint ignores needs to be the lone key to act globally ([@evoactivity](https://github.com/evoactivity))
+
+#### Committers: 1
+- Liam Potter ([@evoactivity](https://github.com/evoactivity))
+
 ## Release (2024-12-06)
 
 @embroider/app-blueprint 0.18.0 (minor)

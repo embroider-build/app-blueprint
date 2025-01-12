@@ -2,16 +2,20 @@
   "solution": {
     "@embroider/app-blueprint": {
       "impact": "minor",
-      "oldVersion": "0.17.0",
-      "newVersion": "0.18.0",
+      "oldVersion": "0.18.0",
+      "newVersion": "0.19.0",
       "constraints": [
         {
           "impact": "minor",
           "reason": "Appears in changelog section :rocket: Enhancement"
+        },
+        {
+          "impact": "patch",
+          "reason": "Appears in changelog section :bug: Bug Fix"
         }
       ],
       "pkgJSONPath": "./package.json"
     }
   },
-  "description": "## Release (2024-12-06)\n\n@embroider/app-blueprint 0.18.0 (minor)\n\n#### :rocket: Enhancement\n* `@embroider/app-blueprint`\n  * [#124](https://github.com/embroider-build/app-blueprint/pull/124) move to the new cleaner vite config ([@mansona](https://github.com/mansona))\n\n#### Committers: 1\n- Chris Manson ([@mansona](https://github.com/mansona))\n"
+  "description": "## Release (2025-01-12)\n\n@embroider/app-blueprint 0.19.0 (minor)\n\n#### :rocket: Enhancement\n* `@embroider/app-blueprint`\n  * [#126](https://github.com/embroider-build/app-blueprint/pull/126) Add vite/client types ([@evoactivity](https://github.com/evoactivity))\n\n#### :bug: Bug Fix\n* `@embroider/app-blueprint`\n  * [#128](https://github.com/embroider-build/app-blueprint/pull/128) fix typescript: eslint ignores needs to be the lone key to act globally ([@evoactivity](https://github.com/evoactivity))\n\n#### Committers: 1\n- Liam Potter ([@evoactivity](https://github.com/evoactivity))\n"
 }
