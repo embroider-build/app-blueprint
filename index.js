@@ -226,23 +226,25 @@ module.exports = {
 
     // there doesn't seem to be a way to tell ember-cli to not prompt to override files that were added in the beforeInstall
     // so I'm just copying a few over at this stage
+    const localsFromAppBlueprint = this.locals(options);
+
     copyWithTemplate(
       join(__dirname, 'files-override/shared'),
       options.target,
-      options,
+      localsFromAppBlueprint,
     );
 
     if (options.typescript) {
       copyWithTemplate(
         join(__dirname, 'files-override/ts'),
         options.target,
-        options,
+        localsFromAppBlueprint,
       );
     } else {
       copyWithTemplate(
         join(__dirname, 'files-override/js'),
         options.target,
-        options,
+        localsFromAppBlueprint,
       );
     }
 
