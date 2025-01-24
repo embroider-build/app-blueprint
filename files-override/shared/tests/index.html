@@ -8,6 +8,10 @@
 
     {{content-for "head"}} {{content-for "test-head"}}
 
+    <script type="module">
+      window.qunit_config_autostart = false;
+    </script>
+
     <link rel="stylesheet" href="/@embroider/virtual/vendor.css" />
     <link rel="stylesheet" href="/assets/<%= name %>.css" />
     <link rel="stylesheet" href="/@embroider/virtual/test-support.css" />
