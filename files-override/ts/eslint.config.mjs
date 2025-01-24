@@ -148,5 +148,5 @@ export default ts.config(
         ...globals.node,
       },
     },
-  }
+  },
 );
