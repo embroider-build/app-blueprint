@@ -1,5 +1,23 @@
 # Changelog
 
+## Release (2025-02-08)
+
+@embroider/app-blueprint 0.20.0 (minor)
+
+#### :rocket: Enhancement
+* `@embroider/app-blueprint`
+  * [#140](https://github.com/embroider-build/app-blueprint/pull/140) make sure to remove loader.js ([@mansona](https://github.com/mansona))
+  * [#134](https://github.com/embroider-build/app-blueprint/pull/134) Add lang attribute and use app title in index.html ([@evoactivity](https://github.com/evoactivity))
+  * [#138](https://github.com/embroider-build/app-blueprint/pull/138) Sync lint configs from ember-cli ([@NullVoxPopuli](https://github.com/NullVoxPopuli))
+
+#### :house: Internal
+* [#135](https://github.com/embroider-build/app-blueprint/pull/135) ESLint trailing comma ([@evoactivity](https://github.com/evoactivity))
+
+#### Committers: 3
+- Chris Manson ([@mansona](https://github.com/mansona))
+- Liam Potter ([@evoactivity](https://github.com/evoactivity))
+- [@NullVoxPopuli](https://github.com/NullVoxPopuli)
+
 ## Release (2025-01-12)
 
 @embroider/app-blueprint 0.19.0 (minor)
