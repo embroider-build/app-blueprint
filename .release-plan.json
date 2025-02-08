@@ -2,20 +2,16 @@
   "solution": {
     "@embroider/app-blueprint": {
       "impact": "minor",
-      "oldVersion": "0.18.0",
-      "newVersion": "0.19.0",
+      "oldVersion": "0.19.0",
+      "newVersion": "0.20.0",
       "constraints": [
         {
           "impact": "minor",
           "reason": "Appears in changelog section :rocket: Enhancement"
-        },
-        {
-          "impact": "patch",
-          "reason": "Appears in changelog section :bug: Bug Fix"
         }
       ],
       "pkgJSONPath": "./package.json"
     }
   },
-  "description": "## Release (2025-01-12)\n\n@embroider/app-blueprint 0.19.0 (minor)\n\n#### :rocket: Enhancement\n* `@embroider/app-blueprint`\n  * [#126](https://github.com/embroider-build/app-blueprint/pull/126) Add vite/client types ([@evoactivity](https://github.com/evoactivity))\n\n#### :bug: Bug Fix\n* `@embroider/app-blueprint`\n  * [#128](https://github.com/embroider-build/app-blueprint/pull/128) fix typescript: eslint ignores needs to be the lone key to act globally ([@evoactivity](https://github.com/evoactivity))\n\n#### Committers: 1\n- Liam Potter ([@evoactivity](https://github.com/evoactivity))\n"
+  "description": "## Release (2025-02-08)\n\n@embroider/app-blueprint 0.20.0 (minor)\n\n#### :rocket: Enhancement\n* `@embroider/app-blueprint`\n  * [#140](https://github.com/embroider-build/app-blueprint/pull/140) make sure to remove loader.js ([@mansona](https://github.com/mansona))\n  * [#134](https://github.com/embroider-build/app-blueprint/pull/134) Add lang attribute and use app title in index.html ([@evoactivity](https://github.com/evoactivity))\n  * [#138](https://github.com/embroider-build/app-blueprint/pull/138) Sync lint configs from ember-cli ([@NullVoxPopuli](https://github.com/NullVoxPopuli))\n\n#### :house: Internal\n* [#135](https://github.com/embroider-build/app-blueprint/pull/135) ESLint trailing comma ([@evoactivity](https://github.com/evoactivity))\n\n#### Committers: 3\n- Chris Manson ([@mansona](https://github.com/mansona))\n- Liam Potter ([@evoactivity](https://github.com/evoactivity))\n- [@NullVoxPopuli](https://github.com/NullVoxPopuli)\n"
 }
