@@ -77,6 +77,9 @@ module.exports = {
         // No longer needed because we explicitly define a babel config
         '@babel/plugin-proposal-decorators',
 
+        //we don't need loader.js any more
+        'loader.js',
+
         // Upstream TypeScript blueprint is out of date, but
         // There is concensus on removing all this from the upstream blueprint as well.
         ...(options.typescript
