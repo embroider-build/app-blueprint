@@ -137,6 +137,7 @@ module.exports = {
         '@babel/plugin-transform-runtime@^7.25.9',
         '@babel/runtime@^7.26.0',
         'ember-template-lint@^6.0.0',
+        'ember-eslint-parser@^0.5.9',
 
         '@ember/string@^4.0.0',
         '@ember/test-helpers@^4.0.0',
