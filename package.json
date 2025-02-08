@@ -19,7 +19,7 @@
     "output:fixture": "node ./lib/bin/output-fixture.mjs"
   },
   "dependencies": {
-    "ember-cli": "^6.0.0",
+    "ember-cli": "^6.2.0",
     "lodash": "^4.17.21",
     "walk-sync": "^3.0.0"
   },
