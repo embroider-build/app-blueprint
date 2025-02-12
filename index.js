@@ -120,13 +120,12 @@ module.exports = {
       'save-dev': true,
       verbose: false,
       packages: [
-        '@embroider/core@unstable',
-        '@embroider/vite@unstable',
-        '@embroider/compat@unstable',
-        '@embroider/test-setup@unstable',
-        '@embroider/config-meta-loader@unstable',
+        '@embroider/core@^4.0.0-alpha.0',
+        '@embroider/vite@^1.0.0-alpha.0',
+        '@embroider/compat@^4.0.0-alpha.0',
+        '@embroider/config-meta-loader@^1.0.0-alpha.0',
         // once @embroider/vite is tested with v6 and has a wider peer dependency range, we should allow installing latest vite again
-        'vite@^5.4.11',
+        'vite@^6.0.0',
         '@rollup/plugin-babel',
         'decorator-transforms',
         '@babel/plugin-transform-runtime',
