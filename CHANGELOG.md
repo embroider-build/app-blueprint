@@ -1,5 +1,20 @@
 # Changelog
 
+## Release (2025-02-13)
+
+@embroider/app-blueprint 0.21.0 (minor)
+
+#### :rocket: Enhancement
+* `@embroider/app-blueprint`
+  * [#141](https://github.com/embroider-build/app-blueprint/pull/141) switch to alpha dependencies ([@mansona](https://github.com/mansona))
+
+#### :bug: Bug Fix
+* `@embroider/app-blueprint`
+  * [#142](https://github.com/embroider-build/app-blueprint/pull/142) update app css location ([@mansona](https://github.com/mansona))
+
+#### Committers: 1
+- Chris Manson ([@mansona](https://github.com/mansona))
+
 ## Release (2025-02-08)
 
 @embroider/app-blueprint 0.20.0 (minor)
