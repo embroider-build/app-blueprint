@@ -1,5 +1,16 @@
 # Changelog
 
+## Release (2025-02-14)
+
+@embroider/app-blueprint 0.22.0 (minor)
+
+#### :rocket: Enhancement
+* `@embroider/app-blueprint`
+  * [#145](https://github.com/embroider-build/app-blueprint/pull/145) Update ember-cli and remove loadTests: false, as the option doesn't exist any more ([@NullVoxPopuli](https://github.com/NullVoxPopuli))
+
+#### Committers: 1
+- [@NullVoxPopuli](https://github.com/NullVoxPopuli)
+
 ## Release (2025-02-13)
 
 @embroider/app-blueprint 0.21.0 (minor)

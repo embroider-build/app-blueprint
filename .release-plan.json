@@ -2,20 +2,16 @@
   "solution": {
     "@embroider/app-blueprint": {
       "impact": "minor",
-      "oldVersion": "0.20.0",
-      "newVersion": "0.21.0",
+      "oldVersion": "0.21.0",
+      "newVersion": "0.22.0",
       "constraints": [
         {
           "impact": "minor",
           "reason": "Appears in changelog section :rocket: Enhancement"
-        },
-        {
-          "impact": "patch",
-          "reason": "Appears in changelog section :bug: Bug Fix"
         }
       ],
       "pkgJSONPath": "./package.json"
     }
   },
-  "description": "## Release (2025-02-13)\n\n@embroider/app-blueprint 0.21.0 (minor)\n\n#### :rocket: Enhancement\n* `@embroider/app-blueprint`\n  * [#141](https://github.com/embroider-build/app-blueprint/pull/141) switch to alpha dependencies ([@mansona](https://github.com/mansona))\n\n#### :bug: Bug Fix\n* `@embroider/app-blueprint`\n  * [#142](https://github.com/embroider-build/app-blueprint/pull/142) update app css location ([@mansona](https://github.com/mansona))\n\n#### Committers: 1\n- Chris Manson ([@mansona](https://github.com/mansona))\n"
+  "description": "## Release (2025-02-14)\n\n@embroider/app-blueprint 0.22.0 (minor)\n\n#### :rocket: Enhancement\n* `@embroider/app-blueprint`\n  * [#145](https://github.com/embroider-build/app-blueprint/pull/145) Update ember-cli and remove loadTests: false, as the option doesn't exist any more ([@NullVoxPopuli](https://github.com/NullVoxPopuli))\n\n#### Committers: 1\n- [@NullVoxPopuli](https://github.com/NullVoxPopuli)\n"
 }
