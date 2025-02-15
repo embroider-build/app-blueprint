@@ -1,5 +1,16 @@
 # Changelog
 
+## Release (2025-02-15)
+
+@embroider/app-blueprint 0.23.0 (minor)
+
+#### :rocket: Enhancement
+* `@embroider/app-blueprint`
+  * [#147](https://github.com/embroider-build/app-blueprint/pull/147) We don't need these overrides anymore ([@NullVoxPopuli](https://github.com/NullVoxPopuli))
+
+#### Committers: 1
+- [@NullVoxPopuli](https://github.com/NullVoxPopuli)
+
 ## Release (2025-02-14)
 
 @embroider/app-blueprint 0.22.0 (minor)
