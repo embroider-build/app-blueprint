@@ -130,17 +130,6 @@ module.exports = {
         'decorator-transforms',
         '@babel/plugin-transform-runtime',
 
-        // Dependencies out of date from upstream
-        // (or waiting for the release train to catch up)
-        'eslint@^9.14.0',
-        'eslint-plugin-ember@^12.3.1',
-        'eslint-plugin-n@^17.13.1',
-        '@babel/eslint-parser@^7.25.9',
-        '@babel/plugin-transform-runtime@^7.25.9',
-        '@babel/runtime@^7.26.0',
-        'ember-template-lint@^6.0.0',
-        'ember-eslint-parser@^0.5.9',
-
         '@ember/string@^4.0.0',
         '@ember/test-helpers@^4.0.0',
         'ember-resolver@^13.0.2',
@@ -148,11 +137,6 @@ module.exports = {
         'qunit@^2.22.0',
         'qunit-dom@^3.3.0',
         'concurrently@^9.1.0',
-
-        // Needed for eslint
-        'globals',
-        'babel-plugin-ember-template-compilation',
-        'prettier-plugin-ember-template-tag',
 
         // TypeScript
         // Note that Vite supports TypeScript with 0 configuration on the user's part
@@ -170,10 +154,6 @@ module.exports = {
               '@glint/environment-ember-loose@unstable', // currently required :(
               '@glint/environment-ember-template-imports@unstable',
               '@glint/template@unstable',
-              '@types/eslint__js',
-              'typescript-eslint@^8.14.1-alpha.8',
-              '@typescript-eslint/eslint-plugin@^8.14.1-alpha.8',
-              '@typescript-eslint/parser@^8.14.1-alpha.8',
             ]
           : []),
       ],
@@ -185,12 +165,6 @@ module.exports = {
     const filesToDelete = [
       // now in the project root
       'app/index.html',
-      // replaced with .eslintrc.cjs
-      '.eslintrc.js',
-      // This file is not supported in ESLint 9
-      '.eslintignore',
-      // replaced with .prettierrc.cjs
-      '.prettierrc.js',
 
       ...(options.typescript
         ? [
