@@ -1,5 +1,16 @@
 # Changelog
 
+## Release (2025-02-18)
+
+@embroider/app-blueprint 0.23.1 (patch)
+
+#### :memo: Documentation
+* `@embroider/app-blueprint`
+  * [#149](https://github.com/embroider-build/app-blueprint/pull/149) downgrade warning message ([@mansona](https://github.com/mansona))
+
+#### Committers: 1
+- Chris Manson ([@mansona](https://github.com/mansona))
+
 ## Release (2025-02-15)
 
 @embroider/app-blueprint 0.23.0 (minor)
