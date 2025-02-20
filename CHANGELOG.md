@@ -1,5 +1,21 @@
 # Changelog
 
+## Release (2025-02-20)
+
+@embroider/app-blueprint 0.23.1 (patch)
+
+#### :bug: Bug Fix
+* `@embroider/app-blueprint`
+  * [#152](https://github.com/embroider-build/app-blueprint/pull/152) Add a default test so that the test command pasess in new projects ([@NullVoxPopuli](https://github.com/NullVoxPopuli))
+
+#### :memo: Documentation
+* `@embroider/app-blueprint`
+  * [#149](https://github.com/embroider-build/app-blueprint/pull/149) downgrade warning message ([@mansona](https://github.com/mansona))
+
+#### Committers: 2
+- Chris Manson ([@mansona](https://github.com/mansona))
+- [@NullVoxPopuli](https://github.com/NullVoxPopuli)
+
 ## Release (2025-02-15)
 
 @embroider/app-blueprint 0.23.0 (minor)
