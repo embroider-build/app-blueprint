@@ -1,1 +1,3 @@
 node_modules/
+# for local testing in the same directory
+my-app/
