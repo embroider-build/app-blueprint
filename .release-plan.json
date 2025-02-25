@@ -2,20 +2,16 @@
   "solution": {
     "@embroider/app-blueprint": {
       "impact": "patch",
-      "oldVersion": "0.23.0",
-      "newVersion": "0.23.1",
+      "oldVersion": "0.23.1",
+      "newVersion": "0.23.2",
       "constraints": [
         {
           "impact": "patch",
           "reason": "Appears in changelog section :bug: Bug Fix"
-        },
-        {
-          "impact": "patch",
-          "reason": "Appears in changelog section :memo: Documentation"
         }
       ],
       "pkgJSONPath": "./package.json"
     }
   },
-  "description": "## Release (2025-02-20)\n\n@embroider/app-blueprint 0.23.1 (patch)\n\n#### :bug: Bug Fix\n* `@embroider/app-blueprint`\n  * [#152](https://github.com/embroider-build/app-blueprint/pull/152) Add a default test so that the test command pasess in new projects ([@NullVoxPopuli](https://github.com/NullVoxPopuli))\n\n#### :memo: Documentation\n* `@embroider/app-blueprint`\n  * [#149](https://github.com/embroider-build/app-blueprint/pull/149) downgrade warning message ([@mansona](https://github.com/mansona))\n\n#### Committers: 2\n- Chris Manson ([@mansona](https://github.com/mansona))\n- [@NullVoxPopuli](https://github.com/NullVoxPopuli)\n"
+  "description": "## Release (2025-02-25)\n\n@embroider/app-blueprint 0.23.2 (patch)\n\n#### :bug: Bug Fix\n* `@embroider/app-blueprint`\n  * [#153](https://github.com/embroider-build/app-blueprint/pull/153) Remove extraneous loadTests: false ([@simonihmig](https://github.com/simonihmig))\n\n#### Committers: 1\n- Simon Ihmig ([@simonihmig](https://github.com/simonihmig))\n"
 }

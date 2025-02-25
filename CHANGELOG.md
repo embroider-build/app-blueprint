@@ -1,5 +1,16 @@
 # Changelog
 
+## Release (2025-02-25)
+
+@embroider/app-blueprint 0.23.2 (patch)
+
+#### :bug: Bug Fix
+* `@embroider/app-blueprint`
+  * [#153](https://github.com/embroider-build/app-blueprint/pull/153) Remove extraneous loadTests: false ([@simonihmig](https://github.com/simonihmig))
+
+#### Committers: 1
+- Simon Ihmig ([@simonihmig](https://github.com/simonihmig))
+
 ## Release (2025-02-20)
 
 @embroider/app-blueprint 0.23.1 (patch)
