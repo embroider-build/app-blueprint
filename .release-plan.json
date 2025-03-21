@@ -2,8 +2,8 @@
   "solution": {
     "@embroider/app-blueprint": {
       "impact": "patch",
-      "oldVersion": "0.23.1",
-      "newVersion": "0.23.2",
+      "oldVersion": "0.23.2",
+      "newVersion": "0.23.3",
       "constraints": [
         {
           "impact": "patch",
@@ -13,5 +13,5 @@
       "pkgJSONPath": "./package.json"
     }
   },
-  "description": "## Release (2025-02-25)\n\n@embroider/app-blueprint 0.23.2 (patch)\n\n#### :bug: Bug Fix\n* `@embroider/app-blueprint`\n  * [#153](https://github.com/embroider-build/app-blueprint/pull/153) Remove extraneous loadTests: false ([@simonihmig](https://github.com/simonihmig))\n\n#### Committers: 1\n- Simon Ihmig ([@simonihmig](https://github.com/simonihmig))\n"
+  "description": "## Release (2025-03-21)\n\n@embroider/app-blueprint 0.23.3 (patch)\n\n#### :bug: Bug Fix\n* `@embroider/app-blueprint`\n  * [#157](https://github.com/embroider-build/app-blueprint/pull/157) install babel-plugin-ember-template-compilation as dependency ([@patricklx](https://github.com/patricklx))\n\n#### Committers: 1\n- Patrick Pircher ([@patricklx](https://github.com/patricklx))\n"
 }

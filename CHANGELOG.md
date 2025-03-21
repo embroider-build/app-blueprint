@@ -1,5 +1,16 @@
 # Changelog
 
+## Release (2025-03-21)
+
+@embroider/app-blueprint 0.23.3 (patch)
+
+#### :bug: Bug Fix
+* `@embroider/app-blueprint`
+  * [#157](https://github.com/embroider-build/app-blueprint/pull/157) install babel-plugin-ember-template-compilation as dependency ([@patricklx](https://github.com/patricklx))
+
+#### Committers: 1
+- Patrick Pircher ([@patricklx](https://github.com/patricklx))
+
 ## Release (2025-02-25)
 
 @embroider/app-blueprint 0.23.2 (patch)
