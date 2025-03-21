@@ -129,6 +129,7 @@ module.exports = {
         '@rollup/plugin-babel',
         'decorator-transforms',
         '@babel/plugin-transform-runtime',
+        'babel-plugin-ember-template-compilation',
 
         '@ember/string@^4.0.0',
         '@ember/test-helpers@^4.0.0',
