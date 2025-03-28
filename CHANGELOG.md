@@ -1,5 +1,16 @@
 # Changelog
 
+## Release (2025-03-28)
+
+@embroider/app-blueprint 0.24.0 (minor)
+
+#### :rocket: Enhancement
+* `@embroider/app-blueprint`
+  * [#160](https://github.com/embroider-build/app-blueprint/pull/160) Bump ember-cli from 6.2.0 to 6.3.0 ([@BlueCutOfficial](https://github.com/BlueCutOfficial))
+
+#### Committers: 1
+- Marine Dunstetter ([@BlueCutOfficial](https://github.com/BlueCutOfficial))
+
 ## Release (2025-03-21)
 
 @embroider/app-blueprint 0.23.3 (patch)
