@@ -1,5 +1,16 @@
 # Changelog
 
+## Release (2025-04-03)
+
+@embroider/app-blueprint 0.24.1 (patch)
+
+#### :bug: Bug Fix
+* `@embroider/app-blueprint`
+  * [#163](https://github.com/embroider-build/app-blueprint/pull/163) fix: add @babel/runtime to installed deps ([@lukasnys](https://github.com/lukasnys))
+
+#### Committers: 1
+- Lukas Nys ([@lukasnys](https://github.com/lukasnys))
+
 ## Release (2025-03-28)
 
 @embroider/app-blueprint 0.24.0 (minor)

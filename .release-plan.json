@@ -1,17 +1,17 @@
 {
   "solution": {
     "@embroider/app-blueprint": {
-      "impact": "minor",
-      "oldVersion": "0.23.3",
-      "newVersion": "0.24.0",
+      "impact": "patch",
+      "oldVersion": "0.24.0",
+      "newVersion": "0.24.1",
       "constraints": [
         {
-          "impact": "minor",
-          "reason": "Appears in changelog section :rocket: Enhancement"
+          "impact": "patch",
+          "reason": "Appears in changelog section :bug: Bug Fix"
         }
       ],
       "pkgJSONPath": "./package.json"
     }
   },
-  "description": "## Release (2025-03-28)\n\n@embroider/app-blueprint 0.24.0 (minor)\n\n#### :rocket: Enhancement\n* `@embroider/app-blueprint`\n  * [#160](https://github.com/embroider-build/app-blueprint/pull/160) Bump ember-cli from 6.2.0 to 6.3.0 ([@BlueCutOfficial](https://github.com/BlueCutOfficial))\n\n#### Committers: 1\n- Marine Dunstetter ([@BlueCutOfficial](https://github.com/BlueCutOfficial))\n"
+  "description": "## Release (2025-04-03)\n\n@embroider/app-blueprint 0.24.1 (patch)\n\n#### :bug: Bug Fix\n* `@embroider/app-blueprint`\n  * [#163](https://github.com/embroider-build/app-blueprint/pull/163) fix: add @babel/runtime to installed deps ([@lukasnys](https://github.com/lukasnys))\n\n#### Committers: 1\n- Lukas Nys ([@lukasnys](https://github.com/lukasnys))\n"
 }
