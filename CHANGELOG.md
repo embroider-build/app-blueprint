@@ -2,6 +2,17 @@
 
 ## Release (2025-04-03)
 
+@embroider/app-blueprint 0.24.2 (patch)
+
+#### :bug: Bug Fix
+* `@embroider/app-blueprint`
+  * [#165](https://github.com/embroider-build/app-blueprint/pull/165) add proper versioning for @babel/runtime ([@lukasnys](https://github.com/lukasnys))
+
+#### Committers: 1
+- Lukas Nys ([@lukasnys](https://github.com/lukasnys))
+
+## Release (2025-04-03)
+
 @embroider/app-blueprint 0.24.1 (patch)
 
 #### :bug: Bug Fix
