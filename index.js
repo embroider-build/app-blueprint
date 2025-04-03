@@ -120,6 +120,7 @@ module.exports = {
       'save-dev': true,
       verbose: false,
       packages: [
+        '@babel/runtime^7.0.0',
         '@embroider/core@^4.0.0-alpha.0',
         '@embroider/vite@^1.0.0-alpha.0',
         '@embroider/compat@^4.0.0-alpha.0',
