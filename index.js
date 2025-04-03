@@ -84,6 +84,7 @@ module.exports = {
         // There is concensus on removing all this from the upstream blueprint as well.
         ...(options.typescript
           ? [
+              '@tsconfig/ember',
               '@types/ember',
               '@types/ember-data',
               '@types/ember-data__adapter',
@@ -143,6 +144,8 @@ module.exports = {
         // Note that Vite supports TypeScript with 0 configuration on the user's part
         ...(options.typescript
           ? [
+              '@ember/app-tsconfig',
+
               // See RFC: https://github.com/emberjs/rfcs/pull/1046
               'ember-route-template',
 
