@@ -2,8 +2,8 @@
   "solution": {
     "@embroider/app-blueprint": {
       "impact": "patch",
-      "oldVersion": "0.24.0",
-      "newVersion": "0.24.1",
+      "oldVersion": "0.24.1",
+      "newVersion": "0.24.2",
       "constraints": [
         {
           "impact": "patch",
@@ -13,5 +13,5 @@
       "pkgJSONPath": "./package.json"
     }
   },
-  "description": "## Release (2025-04-03)\n\n@embroider/app-blueprint 0.24.1 (patch)\n\n#### :bug: Bug Fix\n* `@embroider/app-blueprint`\n  * [#163](https://github.com/embroider-build/app-blueprint/pull/163) fix: add @babel/runtime to installed deps ([@lukasnys](https://github.com/lukasnys))\n\n#### Committers: 1\n- Lukas Nys ([@lukasnys](https://github.com/lukasnys))\n"
+  "description": "## Release (2025-04-03)\n\n@embroider/app-blueprint 0.24.2 (patch)\n\n#### :bug: Bug Fix\n* `@embroider/app-blueprint`\n  * [#165](https://github.com/embroider-build/app-blueprint/pull/165) add proper versioning for @babel/runtime ([@lukasnys](https://github.com/lukasnys))\n\n#### Committers: 1\n- Lukas Nys ([@lukasnys](https://github.com/lukasnys))\n"
 }
