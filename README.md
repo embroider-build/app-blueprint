@@ -3,7 +3,9 @@
 **Very** experimental blueprint for scaffolding Ember v2 apps with Vite
 
 > [!WARNING]
-> This blueprint is a preview of the [v2 app blueprint](https://rfcs.emberjs.com/id/0977-v2-app-format) and uses alpha versions of the upcoming Embroider release. When the RFC has reached the "Released" stage, and the upcoming Embroider release has been marked stable, you should be ok to use this blueprint; until then, only use this blueprint if you know what you're doing.
+> This blueprint is a preview of the [v2 app blueprint](https://rfcs.emberjs.com/id/0507-embroider-v2-package-format/) and was intended to an experiment to see what was needed to ship v2 addons. While the blueprint was successful in its aims, this blueprint will never become the default for newly generated Ember addons. The DX hit of forcing every Ember developer to maintain a monorepo was too high a bar and the Ember Core Tooling team decided it didn't match the expectations of the Ember community. We are currently developing a non-monorepo version of the addon blueprint that is still work in progress but you can try it out now: https://github.com/ember-cli/ember-addon-blueprint
+>
+> Anyone considering a new migration of a v1 addon to v2 should use the new `@ember/addon-blueprint` and not this one 👍
 
 This is likely to change on a daily basis so you have to keep up to date with the changes to expect it work. Use [ember-cli-update](https://github.com/ember-cli/ember-cli-update) to update to the latest version.
 
