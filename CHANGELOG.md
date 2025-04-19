@@ -1,5 +1,16 @@
 # Changelog
 
+## Release (2025-04-19)
+
+@embroider/app-blueprint 0.25.0 (minor)
+
+#### :rocket: Enhancement
+* `@embroider/app-blueprint`
+  * [#170](https://github.com/embroider-build/app-blueprint/pull/170) Embroider router by default ([@void-mAlex](https://github.com/void-mAlex))
+
+#### Committers: 1
+- Alex ([@void-mAlex](https://github.com/void-mAlex))
+
 ## Release (2025-04-03)
 
 @embroider/app-blueprint 0.24.2 (patch)
