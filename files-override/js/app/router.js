@@ -1,5 +1,5 @@
 import EmberRouter from '@embroider/router';
-import config from 'my-fancy-app/config/environment';
+import config from '<%= name %>/config/environment';
 
 export default class Router extends EmberRouter {
   location = config.locationType;
