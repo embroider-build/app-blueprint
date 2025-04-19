@@ -124,6 +124,7 @@ module.exports = {
         '@embroider/core@^4.0.0-alpha.0',
         '@embroider/vite@^1.0.0-alpha.0',
         '@embroider/compat@^4.0.0-alpha.0',
+        '@embroider/router@^3.0.1',
         '@embroider/config-meta-loader@^1.0.0-alpha.0',
         // once @embroider/vite is tested with v6 and has a wider peer dependency range, we should allow installing latest vite again
         'vite@^6.0.0',
