@@ -14,7 +14,7 @@ This is likely to change on a daily basis so you have to keep up to date with th
 This following command will create a new folder called `my-fancy-app` in your cwd 
 
 ```bash
-npx ember-cli@latest new my-fancy-app -b @embroider/app-blueprint --pnpm
+pnpx ember-cli@latest new my-fancy-app -b @embroider/app-blueprint --pnpm
 ```
 
 ### Updating an existing Ember app
@@ -34,5 +34,8 @@ Note: replace `your-app-name` with your existing app name (from the `package.jso
 Use [ember-cli-update](https://github.com/ember-cli/ember-cli-update) to update to later versions of the blueprint:
 
 ```bash
-pnpm dlx ember-cli-update
+pnpx ember-cli-update
 ```
+
+> [!TIP]
+> If you want to use `npm` instead of `pnpm`, then replace `pnpx` with `npx` in the commands above.
