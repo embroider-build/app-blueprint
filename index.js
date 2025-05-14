@@ -131,7 +131,7 @@ module.exports = {
         '@rollup/plugin-babel',
         'decorator-transforms',
         '@babel/plugin-transform-runtime',
-        'babel-plugin-ember-template-compilation',
+        'babel-plugin-ember-template-compilation@^2.4.1', // v3 is an ESM module that is not yet compatible with the babel.config.cfs we generate
 
         '@ember/string@^4.0.0',
         '@ember/test-helpers@^4.0.0',
