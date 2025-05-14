@@ -1,5 +1,23 @@
 # Changelog
 
+## Release (2025-05-14)
+
+@embroider/app-blueprint 0.25.0 (minor)
+
+#### :rocket: Enhancement
+* `@embroider/app-blueprint`
+  * [#162](https://github.com/embroider-build/app-blueprint/pull/162) Switch to our own tsconfig ([@NullVoxPopuli](https://github.com/NullVoxPopuli))
+  * [#170](https://github.com/embroider-build/app-blueprint/pull/170) Embroider router by default ([@void-mAlex](https://github.com/void-mAlex))
+
+#### :bug: Bug Fix
+* `@embroider/app-blueprint`
+  * [#175](https://github.com/embroider-build/app-blueprint/pull/175) Pin babel-plugin-ember-template-compilation to v2 for now ([@robbytx](https://github.com/robbytx))
+
+#### Committers: 3
+- Alex ([@void-mAlex](https://github.com/void-mAlex))
+- Robby Morgan ([@robbytx](https://github.com/robbytx))
+- [@NullVoxPopuli](https://github.com/NullVoxPopuli)
+
 ## Release (2025-04-03)
 
 @embroider/app-blueprint 0.24.2 (patch)
