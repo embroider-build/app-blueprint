@@ -1,3 +1,9 @@
+> [!IMPORTANT]
+> This has been replaced by the app blueprint, [@ember/app-blueprint](https://github.com/ember-cli/ember-app-blueprint).
+
+<details>
+<summary>View the outdated README</summary>
+
 # @embroider/app-blueprint
 
 **Very** experimental blueprint for scaffolding Ember v2 apps with Vite
@@ -36,3 +42,4 @@ Use [ember-cli-update](https://github.com/ember-cli/ember-cli-update) to update 
 ```bash
 pnpm dlx ember-cli-update
 ```
+</details>
