@@ -1,5 +1,16 @@
 # Changelog
 
+## Release (2025-06-19)
+
+@embroider/app-blueprint 0.25.1 (patch)
+
+#### :memo: Documentation
+* `@embroider/app-blueprint`
+  * [#176](https://github.com/embroider-build/app-blueprint/pull/176) Point users to @ember/app-blueprint ([@tcjr](https://github.com/tcjr))
+
+#### Committers: 1
+- Tom Carter ([@tcjr](https://github.com/tcjr))
+
 ## Release (2025-05-14)
 
 @embroider/app-blueprint 0.25.0 (minor)

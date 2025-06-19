@@ -1,21 +1,17 @@
 {
   "solution": {
     "@embroider/app-blueprint": {
-      "impact": "minor",
-      "oldVersion": "0.24.2",
-      "newVersion": "0.25.0",
+      "impact": "patch",
+      "oldVersion": "0.25.0",
+      "newVersion": "0.25.1",
       "constraints": [
         {
-          "impact": "minor",
-          "reason": "Appears in changelog section :rocket: Enhancement"
-        },
-        {
           "impact": "patch",
-          "reason": "Appears in changelog section :bug: Bug Fix"
+          "reason": "Appears in changelog section :memo: Documentation"
         }
       ],
       "pkgJSONPath": "./package.json"
     }
   },
-  "description": "## Release (2025-05-14)\n\n@embroider/app-blueprint 0.25.0 (minor)\n\n#### :rocket: Enhancement\n* `@embroider/app-blueprint`\n  * [#162](https://github.com/embroider-build/app-blueprint/pull/162) Switch to our own tsconfig ([@NullVoxPopuli](https://github.com/NullVoxPopuli))\n  * [#170](https://github.com/embroider-build/app-blueprint/pull/170) Embroider router by default ([@void-mAlex](https://github.com/void-mAlex))\n\n#### :bug: Bug Fix\n* `@embroider/app-blueprint`\n  * [#175](https://github.com/embroider-build/app-blueprint/pull/175) Pin babel-plugin-ember-template-compilation to v2 for now ([@robbytx](https://github.com/robbytx))\n\n#### Committers: 3\n- Alex ([@void-mAlex](https://github.com/void-mAlex))\n- Robby Morgan ([@robbytx](https://github.com/robbytx))\n- [@NullVoxPopuli](https://github.com/NullVoxPopuli)\n"
+  "description": "## Release (2025-06-19)\n\n@embroider/app-blueprint 0.25.1 (patch)\n\n#### :memo: Documentation\n* `@embroider/app-blueprint`\n  * [#176](https://github.com/embroider-build/app-blueprint/pull/176) Point users to @ember/app-blueprint ([@tcjr](https://github.com/tcjr))\n\n#### Committers: 1\n- Tom Carter ([@tcjr](https://github.com/tcjr))\n"
 }
